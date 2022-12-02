@@ -1,6 +1,6 @@
 package com.softserve.edu03;
 
-public class Main {
+public class StudentMain {
     public static void main (String []args) {
         Student St1 = new Student("Ihor", 98);
         Student St2 = new Student("Pavlo", 86);
