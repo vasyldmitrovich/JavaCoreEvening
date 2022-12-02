@@ -1,4 +1,4 @@
-package com.softserve.edu03;
+package com.softserve.edu03.HomeworkTask;
 
 public class PersonMain {
     public static void main(String[] args) {
