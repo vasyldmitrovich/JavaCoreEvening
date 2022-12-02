@@ -44,10 +44,9 @@ public class Student {
     }
 
     public boolean betterStudent(Student s){
-        if (this.rating>s.rating)
-        {return true;}
-        else
-        {return false;}
+        boolean ans;
+        ans = this.rating > s.rating;
+        return ans;
     }
 
     @Override
