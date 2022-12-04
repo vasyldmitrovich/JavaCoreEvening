@@ -40,7 +40,7 @@ public class Person {
     public static void main (String[] args){
         Person Person1 = new Person("Марія", 'Петрова', 1952);
         Person Person2 = new Person("Анна", 'Іванова', 1993);
-        Person Person3 = new Person("Сергій", 'Триньков', 1917);
+        Person Person3 = new Person("Сергій", 'Триньков', 1927);
         Person Person4 = new Person("Микола", 'Петров', 2002);
         Person Person5 = new Person("Ольга", 'Квіткова', 1917);
 
@@ -54,7 +54,6 @@ public class Person {
         System.out.print("Person4", Person4.getAge());
         System.out.println(Person5);
         System.out.print("Person5", Person5.getAge());
-
 
     }
 
