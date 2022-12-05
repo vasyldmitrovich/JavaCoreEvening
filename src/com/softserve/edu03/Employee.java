@@ -1,5 +1,5 @@
 package com.softserve.edu03;
-/*Roman Sitko. Lesson 3 Introduction to OOP. PracticalTaskEmployee*/
+/* Roman Sitko. Lesson 3 Introduction to OOP. PracticalTaskEmployee*/
 public class Employee {
     private String name;
     private int rate;
