@@ -1,6 +1,6 @@
 package com.softserve.edu03;
 
-/* Roman Sitko. Lesson 3. Example task*/
+/* Roman Sitko. Lesson 3. Example task */
 public class MyStudent {
     private String name;
     private int rating;
