@@ -5,6 +5,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private int birthYear;
+    private static int countEmployees = 0;
 
     public Person () {
         firstName = "";
@@ -54,10 +55,11 @@ public class Person {
         } else {
             throw new Exception("Birth year should be bigger 1920 and less 2010");
         }
+        countEmployees += 1;
     }
 
     public void output () {
-        System.out.println("First Name: " + firstName +
+        System.out.println("Employee: " + countEmployees + ". First Name: " + firstName +
                 ", Last Name: " + lastName +
                 ", Year: " + getAge());
     }
@@ -75,15 +77,19 @@ public class Person {
         Person person5 = new Person();
 
         person1.input("Roman", "Petrenko", 1989);
-        person2.input("Viktor", "Kyzyo", 1996);
-        person3.input("Stepan", "Fido", 2002);
-        person4.input("Maria", "Myrnyj", 1975);
-        person5.input("Oleg", "Romanenko", 2000);
-
         person1.output();
+
+        person2.input("Viktor", "Kyzyo", 1996);
         person2.output();
+
+        person3.input("Stepan", "Fido", 2002);
         person3.output();
+
+        person4.input("Maria", "Myrnyj", 1975);
         person4.output();
+
+        person5.input("Oleg", "Romanenko", 2000);
         person5.output();
+
     }
 }
