@@ -48,3 +48,9 @@
 *.doc
 *.docx
 *.pdf
+
+# Single Module Project
+*.iml
+
+/.idea/
+/**/.idea/
