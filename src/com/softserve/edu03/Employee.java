@@ -4,7 +4,7 @@ public class Employee {
     private String name;
     private int rate;
     private int hours;
-    public static float totalSum = 0;
+    public static float totalSum = 0.0f;
 
 
     public Employee() {
@@ -17,7 +17,6 @@ public class Employee {
         this.name = name;
         this.rate = rate;
         this.hours = hours;
-        //totalSum += getSalary();
         totalSum += getBonuses();
     }
 
@@ -79,7 +78,6 @@ public class Employee {
         System.out.println(employee3);
         System.out.println("Total salary with bonus 10% of employee3 is: " + employee3.getBonuses() + "\n");
 
-        //System.out.println("Total salary for all employee: " + (employee1.getSalary() + employee2.getBonuses() + employee3.getBonuses()));
-        System.out.println(Employee.totalSum);
+        System.out.println("Total bonus for all employees: " + String.format("%.2f", Employee.totalSum));
     }
 }
