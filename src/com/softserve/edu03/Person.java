@@ -1,6 +1,7 @@
 package com.softserve.edu03;
 import java.time.Year;
 
+/* Roman Sitko. Lesson 3 Introduction to OOP. Homework task Person*/
 public class Person {
     private String firstName;
     private String lastName;
