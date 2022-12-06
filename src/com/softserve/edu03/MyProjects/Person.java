@@ -1,4 +1,4 @@
-package com.softserve.edu03;
+package com.softserve.edu03.MyProjects;
 import java.time.Year;
 
 /* Roman Sitko. Lesson 3 Introduction to OOP. Homework task Person*/

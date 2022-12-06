@@ -1,4 +1,4 @@
-package com.softserve.edu03;
+package com.softserve.edu03.MyProjects;
 
 /* Roman Sitko. Lesson 3 Introduction to OOP. PracticalTaskEmployee*/
 public class Employee {

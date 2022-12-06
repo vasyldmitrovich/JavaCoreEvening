@@ -1,18 +1,18 @@
-package com.softserve.edu03;
+package com.softserve.edu03.MyProjects;
 
 /* Roman Sitko. Lesson 3. Example task */
-public class MyStudent {
+public class Student {
     private String name;
     private int rating;
     private static int countStudents = 0;
     private static int sumRatings;
 
-    public MyStudent () {
+    public Student() {
         name = "";
         rating = 0;
     }
 
-    public MyStudent (String name, int rating) throws Exception {
+    public Student(String name, int rating) throws Exception {
         this.name = name;
         if (rating >= 0 && rating <= 10) {
             this.rating = rating;
@@ -43,7 +43,7 @@ public class MyStudent {
         return sumRatings / countStudents;
     }
 
-    public boolean betterStudent(Student s) {
+    public boolean betterStudent(com.softserve.edu03.Student s) {
         return false;
     }
 
@@ -55,16 +55,16 @@ public class MyStudent {
     }
 
     public static void main(String[] args) throws Exception {
-        MyStudent student1 = new MyStudent("Roman", 2);
+        Student student1 = new Student("Roman", 2);
         System.out.println(student1.toString());
 
-        MyStudent student2 = new MyStudent("Viktor", 7);
+        Student student2 = new Student("Viktor", 7);
         System.out.println(student2.toString());
 
-        MyStudent student3 = new MyStudent("Vasyl", 5);
+        Student student3 = new Student("Vasyl", 5);
         System.out.println(student1.toString());
 
-        System.out.println("Average ratings all students is: " + MyStudent.avgRating());
+        System.out.println("Average ratings all students is: " + Student.avgRating());
 
     }
 
