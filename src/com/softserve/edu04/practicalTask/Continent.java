@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Continent {
-    public static void getContinents(){
+    public static void getContinents() {
         System.out.println("Input country");
         Scanner scan = new Scanner(System.in);
         String country = scan.nextLine();
@@ -21,11 +21,12 @@ public class Continent {
         AFRICA("Nigeria" + "Ethiopia" + "Egypt" + "Democratic" + "Tanzania" + "South Africa" + "Kenya"),
         ANTARCTICA("Antarctica");
         static HashMap<String, String> map = new HashMap<>();
-        public static void mapper(){
-            for (Continents cont : values()){
-               for (String country : Arrays.asList(cont.getCountry())){
-                   map.put(cont.toString(), country);
-               }
+
+        public static void mapper() {
+            for (Continents cont : values()) {
+                for (String country : Arrays.asList(cont.getCountry())) {
+                    map.put(cont.toString(), country);
+                }
             }
         }
 
@@ -35,18 +36,17 @@ public class Continent {
             this.country = country;
         }
 
-        public  String getCountry() {
-           return country;
+        public String getCountry() {
+            return country;
         }
-        public static String getContinent(String country){
+
+        public static String getContinent(String country) {
             mapper();
-            for (String key : map.keySet()){
+            for (String key : map.keySet()) {
                 if (map.get(key).toLowerCase().contains(country.toLowerCase())) return key;
             }
             return "Unknown country (add it)";
         }
-
-
     }
 }
 

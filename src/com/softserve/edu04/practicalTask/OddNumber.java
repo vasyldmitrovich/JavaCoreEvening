@@ -22,8 +22,6 @@ public class OddNumber {
                 counter++;
             }
         }
-
         System.out.println("Odd - " + arr1 + " | quantity - " + counter);
-
     }
 }

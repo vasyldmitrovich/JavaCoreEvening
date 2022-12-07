@@ -15,7 +15,6 @@ public class DayOfTheWeek {
             System.out.println("Bad number");
             System.exit(1);
         }
-
         System.out.println(daysArr.get(num - 1).getDay());
     }
 
@@ -26,7 +25,6 @@ public class DayOfTheWeek {
 
         Days(String day) {
             this.day = day;
-
         }
 
         public String getDay() {

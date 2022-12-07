@@ -3,12 +3,12 @@ package com.softserve.edu04.homeTask;
 import java.util.ArrayList;
 
 public class Dog {
-    private String name;
-    private Breed breed;
-    private int age;
+    private final String name;
+    private final Breed breed;
+    private final int age;
     private static int maxAge = Integer.MIN_VALUE;
     private static boolean checkName = false;
-    private static ArrayList<Dog> arr = new ArrayList<>();
+    private static final ArrayList<Dog> arr = new ArrayList<>();
 
     public Dog(String name, Breed breed, int age) {
         this.name = name;
@@ -44,11 +44,12 @@ public class Dog {
     }
 
     public static void checkOldest() {
-        for (Dog dog : arr) if (dog.getAge() == maxAge) System.out.println(dog.getBreed() + " " + dog.getName() + " is the oldest dog, " + dog.getAge() + " years" );
+        for (Dog dog : arr)
+            if (dog.getAge() == maxAge)
+                System.out.println(dog.getBreed() + " " + dog.getName() + " is the oldest dog, " + dog.getAge() + " years");
     }
 }
 
 enum Breed {
     Terrier, Spaniel, Shepherd, Beagle, Bulldog, Chihuahua
-
 }
