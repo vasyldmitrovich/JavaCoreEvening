@@ -13,7 +13,7 @@ public class MainContinent {
             case "China", "India", "Southern Asia", "Indonesia", "Pakistan",
                     "Bangladesh", "Philippines", "Vietnam", "Turkey", "Iran", "Thailand",
                     "Myanmar", "South Korea", "Iraq", "Afghanistan" -> {
-                System.out.println("This country is located in the continent:"
+                System.out.println("This country is located in the continent: "
                         + Continents.Asia.getContinent());
             }
             case "Brazil", "Argentina", "Peru", "Colombia", "Bolivia", "Venezuela",
