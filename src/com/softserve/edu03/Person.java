@@ -8,24 +8,27 @@ public class Person {
     private int birthYear;
     protected int age;
 
+
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
     public String getFirstName(){
         return this.firstName;
     }
-    public void setFirstName(String firstName){
-        this.firstName = firstName;
+
+    public void setLastName(String lastName){
+        this.lastName = lastName;
     }
     public String getLastName(){
         return this.lastName;
     }
-    public void setLastName(String lastName){
-        this.lastName = lastName;
+    public void setBirthYear(int birthYear){
+        this.birthYear = birthYear;
     }
     public int getBirthYear(){
         return this.birthYear;
     }
-    public void setBirthYear(int birthYear){
-        this.birthYear = birthYear;
-    }
+
     public Person(){
         firstName = "";
         lastName = "";
