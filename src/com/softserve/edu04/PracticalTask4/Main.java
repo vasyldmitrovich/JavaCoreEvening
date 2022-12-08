@@ -12,13 +12,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         //odd numbers
-        PracticalTask.writeMessege("Enter first number");
+        PracticalTask.writeMessege("Input a first number");
         n1 = Integer.parseInt(br.readLine());
 
-        PracticalTask.writeMessege("Enter second number");
+        PracticalTask.writeMessege("Input a second number");
         n2 = Integer.parseInt(br.readLine());
 
-        PracticalTask.writeMessege("Enter third number");
+        PracticalTask.writeMessege("Input a third number");
         n3 = Integer.parseInt(br.readLine());
 
         boolean noOdd = true;
@@ -34,7 +34,7 @@ public class Main {
         if (noOdd == true){PracticalTask.writeMessege("There aren't any odd numbers");}
 
         //Days of the week
-        PracticalTask.writeMessege("\nEnter number day of the week");
+        PracticalTask.writeMessege("\nInput a number day of the week");
         int ndw;
         ndw = Integer.parseInt(br.readLine());
 
@@ -59,9 +59,9 @@ public class Main {
         }
 
         //Countries
-        PracticalTask.writeMessege("\nEnter country");
+        PracticalTask.writeMessege("\nInput a country");
         String country = br.readLine();
-        PracticalTask.showContinent(country);
+        PracticalTask.showContinent(country.toLowerCase());
 
         //Product
         Product product1 = new Product("orange", 10, 5);

@@ -57,20 +57,20 @@ public class PracticalTask {
 
     public static void showContinent(String country){
         switch (country){
-            case "Ukraine", "France", "German", "Poland", "Italy", "United Kingdom" -> {
+            case "ukraine", "france", "german", "poland", "italy", "united kingdom" -> {
                 writeMessege(country+" is in "+Continents.EUROPE.getName());}
-            case "Australia", "New Zealand", "Papua New Guinea", "Fiji" -> {
+            case "australia", "new zealand", "papua new guinea", "Fiji" -> {
                 writeMessege(country+" is in "+Continents.AUSTRALIA.getName());}
-            case "Nigeria", "Ethiopia", "Egypt", "Tanzania", "South Africa", "Kenya"-> {
+            case "nigeria", "ethiopia", "egypt", "tanzania", "south africa", "kenya"-> {
                 writeMessege(country+" is in "+Continents.AFRICA.getName());}
-            case "China", "India", "Japan", "Indonesia", "Pakistan", "Turkey", "Iran" -> {
+            case "china", "india", "japan", "indonesia", "pakistan", "turkey", "iran" -> {
                 writeMessege(country+" is in "+Continents.ASIA.getName());}
-            case "USA", "Canada", "Mexico", "Cuba", "Haiti", "Guatemala", "Dominican Republic" -> {
+            case "usa", "canada", "mexico", "cuba", "haiti", "guatemala", "dominican republic" -> {
                 writeMessege(country+" is in "+Continents.NORTH_AMERICA.getName());}
-            case "Brazil", "Argentina", "Peru", "Chile", "Colombia", "Venezuela", "Ecuador" -> {
-                writeMessege(country+" is in "+Continents.SOUTH_AMERICA.getName());}
+            case "brazil", "argentina", "peru", "chile", "colombia", "venezuela", "ecuador" -> {
+                writeMessege("It is in "+Continents.SOUTH_AMERICA.getName());}
             default -> {
-                writeMessege("There isn't information about "+country);
+                writeMessege("There isn't information about this country");
             }
         }
 
