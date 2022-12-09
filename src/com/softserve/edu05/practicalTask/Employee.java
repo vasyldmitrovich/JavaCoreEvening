@@ -8,6 +8,8 @@ public class Employee {
     private String name;
     private int departmentNumber;
     private int salary;
+    /*Plead use array employee not here, use and sort, find or something like that
+    * in another class like App and wrote unique method where will be all logic*/
     static ArrayList<Employee> arr = new ArrayList<>();
     private static boolean checkDepart = false;
 
@@ -32,6 +34,7 @@ public class Employee {
     }
 
 
+    /*All logic about input data move to another class and methods*/
     public static void departmentCheck() {
         System.out.println("Input department number");
         Scanner scan = new Scanner(System.in);

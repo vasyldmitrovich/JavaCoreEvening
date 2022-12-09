@@ -44,6 +44,7 @@ public class Person {
         return LocalDate.now().getYear() - birthYear;
     }
 
+
     public void input() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Input birth year");
@@ -64,6 +65,8 @@ public class Person {
         lastName = !ln.isBlank() ? ln : lastName;
     }
 
+    /*Move main method to another class for example public class AppMain
+    * and in that class do like i wrote in class Main in package practicalTask*/
     public static void main(String[] args) {
         Person person1 = new Person("Mike", "Tyson");
         person1.input();

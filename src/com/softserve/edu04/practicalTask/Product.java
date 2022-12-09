@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Product {
     private String name;
     private int price, quantity;
+    /*Put list object in static variable is not good decision
+    * And that class is template, for manipulation with that list use another class and methods*/
     private static ArrayList<Product> products = new ArrayList<>();
     private static int minPrice = Integer.MIN_VALUE;
     private static int minQuantity = Integer.MIN_VALUE;

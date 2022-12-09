@@ -5,6 +5,12 @@ import java.util.Scanner;
 
 public class OddNumber {
     public static void oddNumbers() {
+        /*For scanner create own method, that method have only one function
+        * You send message in that method
+        * he take that message and show user
+        * after that read message from keyword
+        * and return value
+        * after that you can use there that value*/
         Scanner scan = new Scanner(System.in);
         ArrayList<Integer> arr = new ArrayList<>();
         ArrayList<Integer> arr1 = new ArrayList<>();

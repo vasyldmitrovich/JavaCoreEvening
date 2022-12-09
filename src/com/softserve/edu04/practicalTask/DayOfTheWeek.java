@@ -18,6 +18,8 @@ public class DayOfTheWeek {
         System.out.println(daysArr.get(num - 1).getDay());
     }
 
+    /*Do not do enum like inner class, create for enum own file, enum must be like unique class
+    * Can do inner only if that inner class do not have purport outside*/
     enum Days {
         MONDAY("Понеділок | Monday"), TUESDAY("Вівторок | Tuesday"), WEDNESDAY("Середа | Wednesday"), THURSDAY("Четвер | Thursday"), FRIDAY("П'ятниця | Friday"), SATURDAY("Субота | Saturday"), SUNDAY("Неділя | Sunday");
 
