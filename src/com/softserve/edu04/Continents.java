@@ -6,10 +6,7 @@ import java.io.InputStreamReader;
 
 public class Continents {
     public static void main(String [] args) throws IOException {
-        enum Cont {
-            ASIA, AFRICA, AMERICA, EUROPE, AUSTRALIA;
 
-        }
             BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введіть країну: ");
             String inpCountry = inp.readLine();
@@ -35,4 +32,8 @@ public class Continents {
             }
 
     }
+}
+enum Cont {
+    ASIA, AFRICA, AMERICA, EUROPE, AUSTRALIA;
+
 }

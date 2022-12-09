@@ -42,6 +42,7 @@ public class Product {
     }
 
 
+    /*Move that main method to another class*/
     public static void main(String[] args) {
         Product product1 = new Product("Book", 2.5f, 5);
         Product product2 = new Product("Pen", 2.9f, 8);

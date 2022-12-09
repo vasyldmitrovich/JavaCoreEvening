@@ -5,30 +5,7 @@ import java.io.InputStreamReader;
 
 public class DayWeek {
    public static void main(String [] args) throws IOException{
-        enum dayOfWeek {
-           MD("Monday", "Понеділок"),
-           TD("Tuesday", "Вівторок"),
-           WD("Wednesday", "Середа"),
-           TH("Thursday", "Четвер"),
-           FD("Friday", "П'ятниця"),
-           SD("Saturday", "Субота"),
-           SND("Sanday", "Неділя");
-           private final String en;
-           private final String ua;
 
-           dayOfWeek(String en, String ua) {
-               this.en = en;
-               this.ua = ua;
-           }
-
-           public String getEn() {
-               return en;
-           }
-
-           public String getUa() {
-               return ua;
-           }
-       }
 
        BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
        System.out.println("Введіть порядковий номер дня тижня: ");
@@ -61,4 +38,29 @@ public class DayWeek {
     }
 
    }
+}
+/*Enum must be in own file like all classes in that package*/
+enum dayOfWeek {
+    MD("Monday", "Понеділок"),
+    TD("Tuesday", "Вівторок"),
+    WD("Wednesday", "Середа"),
+    TH("Thursday", "Четвер"),
+    FD("Friday", "П'ятниця"),
+    SD("Saturday", "Субота"),
+    SND("Sanday", "Неділя");
+    private final String en;
+    private final String ua;
+
+    dayOfWeek(String en, String ua) {
+        this.en = en;
+        this.ua = ua;
+    }
+
+    public String getEn() {
+        return en;
+    }
+
+    public String getUa() {
+        return ua;
+    }
 }

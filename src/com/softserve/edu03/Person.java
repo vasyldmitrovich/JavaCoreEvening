@@ -9,6 +9,7 @@ public class Person {
     protected int age;
 
 
+    /*Getters and Setters must be after constructors*/
     public void setFirstName(String firstName){
         this.firstName = firstName;
     }
@@ -34,6 +35,7 @@ public class Person {
         lastName = "";
         birthYear = 0;
     }
+    /*Please add spaces bet-wine methods*/
     public Person(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
@@ -44,6 +46,10 @@ public class Person {
         this.lastName = lastName;
         this.birthYear = birthYear;
     }
+
+    /*Fields like that should not be here
+    * they can be in some method
+    * I recommend you use variable like that here where you will create person*/
     LocalDate current_date = LocalDate.now();
     int current_Year = current_date.getYear();
     public int getAge(){
@@ -66,6 +72,7 @@ public class Person {
     public void changeName(String fn, String ln){
         this.firstName = fn;
         this.lastName = ln;
+        /*return do not needed here because that method has type void*/
         return;
     }
 }

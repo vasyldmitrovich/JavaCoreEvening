@@ -6,6 +6,8 @@ public class Student {
     private static float avgRating = 0;
     private static int count = 0;
     private static int totalRating = 0;
+    /*Plead use spaces between methods
+    * And remember about consistency field constructors getters etc.*/
     public void setName(String name){
         this.name = name;
     }

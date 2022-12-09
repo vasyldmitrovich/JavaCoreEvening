@@ -1,7 +1,7 @@
 package com.softserve.edu03;
 
 
-
+/*Divide practical and homework to different package*/
 public class AppPerson {
     public static void main(String [] args){
         Person person1 = new Person();
