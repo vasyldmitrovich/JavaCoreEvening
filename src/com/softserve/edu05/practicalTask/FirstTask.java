@@ -2,7 +2,7 @@ package com.softserve.edu05.practicalTask;
 
 import java.util.Random;
 
-public class firstTask {
+public class FirstTask {
     static Random random = new Random();
 
     public static void arrayFunctions() {
