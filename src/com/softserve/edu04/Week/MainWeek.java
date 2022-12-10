@@ -5,21 +5,21 @@ package com.softserve.edu04.Week;
     import java.io.InputStreamReader;
 
 public class MainWeek {
-          public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String DayOfWeek = Integer.parseInt(br.readLine());
 
         System.out.println("Ведіть порядковий номер дня тижня:");
 
-        switch (DayOfWeek){
+        switch (DayOfWeek) {
             case "First" -> {
                 System.out.println("Your Choise is: " + TaskWeek.First.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.First.getUa());
             }
-            case "Second" ->{
+            case "Second" -> {
                 System.out.println("Your Choise is: " + TaskWeek.Second.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.Second.getUa());
-                }
+            }
             case "Third" -> {
                 System.out.println("Your Choise is: " + TaskWeek.Third.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.Third.getUa());
@@ -42,8 +42,9 @@ public class MainWeek {
             }
 
             default -> {
-                        System.out.println("Москальської не розумію! Вчи Англійську!");
-                    }
+                System.out.println("Москальської не розумію! Вчи Англійську!");
+            }
         }
 
+    }
 }

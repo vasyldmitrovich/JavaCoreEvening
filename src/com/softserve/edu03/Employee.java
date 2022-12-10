@@ -2,30 +2,30 @@ package com.softserve.edu03;
 
 public class Employee {
     private String name;
-    private double rate;
+    private double Rate;
     private int Hours;
 
     static double totalSum;
     static double bonuses;
-    static int percent = 0,5;
+    static float percent = 0.1;
 
 
         public  Employee(){
         name = "";
-        rate = "";
+        Rate = "";
         Hours = "";
       }
 
       public  Employee (String Name){
         this.name = "";
-        rate = "";
+        Rate = "";
         Hours = "";
       }
 
       public  Employee (String name, double rate, int Hours){
             this.name = name;
             this.Hours = Hours;
-            this.rate = rate;
+            this.Rate = rate;
       }
 
         public void setName(String name){
@@ -33,12 +33,12 @@ public class Employee {
       }
 
       public double TotalSum(){
-            return TotalSum()
+            return TotalSum();
       }
 
     public double getSalary(){
-        totalSum += this.rate * this.Hours;
-        return this.rate * this.Hours;
+        totalSum += this.Rate * this.Hours;
+        return this.Rate * this.Hours;
     }
 
     public double getBonuses(){
@@ -50,7 +50,7 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "Ім'я='" + name +
-                ", Ставка=" + rate +
+                ", Ставка=" + Rate +
                 ", Годин відпрацьовано=" + Hours +
                 ", Нараховано бонусів=" + bonuses +
                 '}';

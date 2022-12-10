@@ -33,16 +33,15 @@ public class Person {
     }
 
     @Override
-    public String toString() {
-        return "FirstName"  + firstName + ", l=LastName" + lastName + "Age" + age + ";
+    public String toString() {return "FirstName"  + firstName + ", LastName" + lastName + "Age" + age ;
     }
 
     public static void main (String[] args){
-        Person Person1 = new Person("Марія", 'Петрова', 1952);
-        Person Person2 = new Person("Анна", 'Іванова', 1993);
-        Person Person3 = new Person("Сергій", 'Триньков', 1927);
-        Person Person4 = new Person("Микола", 'Петров', 2002);
-        Person Person5 = new Person("Ольга", 'Квіткова', 1917);
+        Person Person1 = new Person("Марія", "Петрова", 1952);
+        Person Person2 = new Person("Анна", "Іванова", 1993);
+        Person Person3 = new Person("Сергій", "Триньков", 1927);
+        Person Person4 = new Person("Микола", "Петров", 2002);
+        Person Person5 = new Person("Ольга", "Квіткова", 1917);
 
         System.out.println(Person1);
         System.out.print("Person1", Person1.getAge());

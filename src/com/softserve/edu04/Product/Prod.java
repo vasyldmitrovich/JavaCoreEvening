@@ -32,7 +32,6 @@ public class Prod {
         Price = 0.0f;
         Quantity = 0;
     }
-
     public Prod (String Name, float Price, int Quantity){
         this.Name =Name;
         return this.Price;
