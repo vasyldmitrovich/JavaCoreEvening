@@ -50,6 +50,3 @@ public class Dog {
     }
 }
 
-enum Breed {
-    Terrier, Spaniel, Shepherd, Beagle, Bulldog, Chihuahua
-}

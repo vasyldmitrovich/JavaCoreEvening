@@ -57,6 +57,9 @@ public class Employee {
     public static int getTotalSum() {
         return totalSum;
     }
+    public static void run(){
+        Employee Dan = new Employee("Dan", 5, 20);
+    }
 
 
 }

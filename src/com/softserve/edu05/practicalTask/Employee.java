@@ -33,7 +33,6 @@ public class Employee {
         return salary;
     }
 
-
     /*All logic about input data move to another class and methods*/
     public static void departmentCheck() {
         System.out.println("Input department number");
