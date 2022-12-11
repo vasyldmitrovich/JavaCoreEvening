@@ -3,7 +3,7 @@ package com.softserve.edu01;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class edu01Part1 {
+public class Edu01Part1 {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
 

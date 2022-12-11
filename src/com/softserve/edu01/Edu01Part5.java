@@ -2,7 +2,7 @@ package com.softserve.edu01;
 
 import java.util.Scanner;
 
-public class edu01Part5 {
+public class Edu01Part5 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter the cost of calling the first country: ");
