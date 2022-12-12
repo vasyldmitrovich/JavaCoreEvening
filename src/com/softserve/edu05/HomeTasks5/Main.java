@@ -2,13 +2,13 @@ package com.softserve.edu05.HomeTasks5;
 
 public class Main {
     public static void main(String[] args) {
-       /*HomeTask5.resolveFirstTask();
+       HomeTask5.resolveFirstTask();
 
        System.out.println();
        HomeTask5.resolveSecondTask();
 
        System.out.println();
-       HomeTask5.resolveThirdTask();*/
+       HomeTask5.resolveThirdTask();
 
        System.out.println();
        HomeTask5.resolveFourthTask();
