@@ -4,15 +4,23 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class CarRealisation extends Car {
-    private static ArrayList<Car> arr = new ArrayList<>();
+public class CarRealisation /*extends Car*/ {
 
-    public CarRealisation(String type, int year, double engineCapacity) {
-        super(type, year, engineCapacity);
-        arr.add(this);
+
+    private ArrayList<Car> arr = new ArrayList<>();
+
+    public CarRealisation() {
     }
 
-    public static void certainModelYear(Scanner scan) {
+    public ArrayList<Car> getArr() {
+        return arr;
+    }
+
+    public void setArr(ArrayList<Car> arr) {
+        this.arr = arr;
+    }
+
+    public void certainModelYear(Scanner scan) {
         boolean checkIfPresent = false;
         System.out.println("Input year");
         int year = scan.nextInt();
@@ -25,6 +33,14 @@ public class CarRealisation extends Car {
         if (!checkIfPresent) System.out.println("No car with your year");
     }
 
+    /*
+    public CarRealisation(String type, int year, double engineCapacity) {
+        super(type, year, engineCapacity);
+        arr.add(this);
+    }
+
+
+
     public static void orderCars() {
         arr.sort(new Comparator<Car>() {
             @Override
@@ -34,4 +50,6 @@ public class CarRealisation extends Car {
         });
         System.out.println("Sorted by year - " + arr.toString());
     }
+
+    */
 }
