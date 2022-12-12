@@ -11,10 +11,11 @@ public enum Continent {
         private final String Continent;
 
         Continent (String Name){
-                this.Continent = Continent;
+              this.Continent = getContinent();
         }
 
         public String getContinent() {
                 return Continent;
         }
+        public void setContinent(String Continent) {Continent = Continent; }
 }

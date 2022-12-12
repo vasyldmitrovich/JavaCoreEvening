@@ -7,19 +7,19 @@ public class Employee {
 
     static double totalSum;
     static double bonuses;
-    static float percent = 0.1;
+    static float percent = 0.1f;
 
 
         public  Employee(){
         name = "";
-        Rate = "";
-        Hours = "";
+        Rate = 0.1;
+        Hours = 22;
       }
 
       public  Employee (String Name){
         this.name = "";
-        Rate = "";
-        Hours = "";
+        Rate = 0.1;
+        Hours = 22;
       }
 
       public  Employee (String name, double rate, int Hours){
@@ -62,13 +62,13 @@ public class Employee {
             Employee Staff3 = new Employee("Кицін", 120, 20);
 
         System.out.println(Staff1);
-        System.out.print("His salary and bonuses is", Staff1.getSalary(), Staff1.getBonuses());
+        System.out.print("His salary and bonuses is" + Staff1.getSalary() + Staff1.getBonuses());
         System.out.println(Staff2);
-        System.out.print("His salary and bonuses is", Staff3.getSalary(), Staff2.getBonuses());
+        System.out.print("His salary and bonuses is" + Staff3.getSalary() + Staff2.getBonuses());
         System.out.println(Staff3);
-        System.out.print("His salary and bonuses is", Staff3.getSalary(), Staff3.getBonuses());
+        System.out.print("His salary and bonuses is" + Staff3.getSalary() + Staff3.getBonuses());
 
-        System.out.print("Total Salery", Employee.totalSum);
+        System.out.print("Total Salery" + Employee.totalSum);
 
     }
 

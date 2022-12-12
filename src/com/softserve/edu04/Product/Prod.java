@@ -34,7 +34,7 @@ public class Prod {
     }
     public Prod (String Name, float Price, int Quantity){
         this.Name =Name;
-        return this.Price;
+        this.Price=Price;
         this.Quantity =Quantity;
     }
 

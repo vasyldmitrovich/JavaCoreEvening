@@ -7,36 +7,36 @@ package com.softserve.edu04.Week;
 public class MainWeek {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String DayOfWeek = Integer.parseInt(br.readLine());
+        int DayOfWeek = Integer.parseInt(br.readLine());
 
         System.out.println("Ведіть порядковий номер дня тижня:");
 
         switch (DayOfWeek) {
-            case "First" -> {
+            case 1 -> {
                 System.out.println("Your Choise is: " + TaskWeek.First.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.First.getUa());
             }
-            case "Second" -> {
+            case 2 -> {
                 System.out.println("Your Choise is: " + TaskWeek.Second.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.Second.getUa());
             }
-            case "Third" -> {
+            case 3 -> {
                 System.out.println("Your Choise is: " + TaskWeek.Third.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.Third.getUa());
             }
-            case "Fourth" -> {
+            case 4 -> {
                 System.out.println("Your Choise is: " + TaskWeek.Fourth.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.Fourth.getUa());
             }
-            case "Fifth" -> {
+            case 5 -> {
                 System.out.println("Your Choise is: " + TaskWeek.Fifth.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.Fifth.getUa());
             }
-            case "Sixth" -> {
+            case 6 -> {
                 System.out.println("Your Choise is: " + TaskWeek.Sixth.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.Sixth.getUa());
             }
-            case "Seventh" -> {
+            case 7 -> {
                 System.out.println("Your Choise is: " + TaskWeek.Seventh.getEn());
                 System.out.println("Ви обрали: " + TaskWeek.Seventh.getUa());
             }

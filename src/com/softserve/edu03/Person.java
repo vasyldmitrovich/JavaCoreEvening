@@ -28,6 +28,10 @@ public class Person {
         lastName = LastName;
     }
 
+    public int getAge(){ return getAge(); }
+    public void setAge(int age) { age = age; }
+
+
     private int getAge(Person a){
         return age = Year - a.birthYear;
     }
@@ -44,15 +48,15 @@ public class Person {
         Person Person5 = new Person("Ольга", "Квіткова", 1917);
 
         System.out.println(Person1);
-        System.out.print("Person1", Person1.getAge());
+        System.out.print("Person1" + Person1.getAge());
         System.out.println(Person2);
-        System.out.print("Person2", Person2.getAge());
+        System.out.print("Person2"+  Person2.getAge());
         System.out.println(Person3);
-        System.out.print("Person3", Person3.getAge());
+        System.out.print("Person3" + Person3.getAge());
         System.out.println(Person4);
-        System.out.print("Person4", Person4.getAge());
+        System.out.print("Person4" + Person4.getAge());
         System.out.println(Person5);
-        System.out.print("Person5", Person5.getAge());
+        System.out.print("Person5" + Person5.getAge());
 
     }
 

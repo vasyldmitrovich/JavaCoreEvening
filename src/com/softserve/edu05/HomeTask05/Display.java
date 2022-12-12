@@ -1,8 +1,5 @@
 package com.softserve.edu05.HomeTask05;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 public class Display {
 
     public static void main(String[] args) {
@@ -21,8 +18,8 @@ public class Display {
 
         //Amount
         int amount = 0;
-        for (int n : Numbers) {
-            if (n > 0) {
+        for (int m : Numbers) {
+            if (m > 0) {
                 continue;
             }
             amount += 1;
@@ -30,9 +27,9 @@ public class Display {
         System.out.println("Amount = " + amount);
 
         //Max
-        int max = Collections.max(Arrays.asList(Numbers));
-        System.out.println("Maximal number = " + max);
-    }
+//        int max = Collections.max(Arrays.asList(Numbers));
+//        System.out.println("Maximal number = " + max);
+        }
 
 
 }
