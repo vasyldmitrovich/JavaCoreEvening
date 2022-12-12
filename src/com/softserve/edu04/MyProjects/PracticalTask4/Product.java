@@ -3,7 +3,12 @@ package com.softserve.edu04.MyProjects.PracticalTask4;
 public class Product {
     private String name;
     private int price;
-    private  int quantity;
+    private int quantity;
+
+    private static int mostExpencive;
+    private static String nameMostExpencive;
+    private static int biggestQuantity;
+    private static String nameBiggestQuantity;
 
     public Product(String name, int price, int quantity) {
         this.name = name;
@@ -12,36 +17,28 @@ public class Product {
     }
 
     public static void mostExpensive (Product[] p) {
-        int a = 0;
-//        for(Product i :  p) {
-//            if(i.price >= i.price) {
-//                System.out.println(i.price);
-//            }
-//        }
-        System.out.println(p.length);
-        for (int j = 0; j < p.length; j++) {
-            if (p[j].price > p[j+1].price) {
-                a = p[j].price;
+        mostExpencive = p[0].price;
+        for (int i = 0; i < p.length; i++) {
+            if (p[i].price > mostExpencive) {
+                mostExpencive = p[i].price;
+            }
+            if (p[i].price == mostExpencive) {
+                nameMostExpencive = p[i].name;
             }
         }
-        System.out.println(a);
-
-
-//        int[] a = {7, 2, 8, 9, 0, 10};
-//        int  b = 0;
-//        for (int i = 0; i < a.length; i++) {
-//            if(a[i] > a[i + 1]) {
-//                b = a[i +1];
-//                a[i + 1] = a[i];
-//                a[i] = b;
-//                b = a[i +1];
-//            }
-////            else {
-////                b = a[i + 1];
-////            }
-//        }
-//        System.out.println(b);
-
+        System.out.println("Most expencive product: " + nameMostExpencive + ", price: "+ mostExpencive);
     }
 
+    public static void biggestQuantity (Product[] p) {
+        biggestQuantity = p[0].quantity;
+        for (int i = 0; i < p.length; i++) {
+            if (p[i].quantity > biggestQuantity) {
+                biggestQuantity = p[i].quantity;
+            }
+            if (p[i].quantity == biggestQuantity) {
+                nameBiggestQuantity = p[i].name;
+            }
+        }
+        System.out.println("Name of biggest quantity: " + nameBiggestQuantity + ", quantity: "+ biggestQuantity);
+    }
 }
