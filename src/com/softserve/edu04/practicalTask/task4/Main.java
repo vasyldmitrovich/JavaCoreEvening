@@ -2,6 +2,10 @@ package com.softserve.edu04.practicalTask.task4;
 
 public class Main {
     public static void main(String[] args) {
+        start();
+    }
+
+    public static void start(){
         Product p1 = new Product("product-1", 100.99, 5);
         Product p2 = new Product("product-2", 74.99, 1);
         Product p3 = new Product("product-3", 50.00, 10);
@@ -22,6 +26,5 @@ public class Main {
                 System.out.println("The product with biggest quantity is " + p);
             }
         }
-
     }
 }

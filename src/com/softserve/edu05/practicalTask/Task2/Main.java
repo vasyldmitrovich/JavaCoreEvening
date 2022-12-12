@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        start();
+    }
+
+    public static void start(){
 
         Employee employee1 = new Employee("Vladyslav", DepartmentNumber.DEPARTMENT_101, 15000.00);
         Employee employee2 = new Employee("Andriy", DepartmentNumber.DEPARTMENT_103, 17400.00);

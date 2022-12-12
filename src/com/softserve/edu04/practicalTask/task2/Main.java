@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        start();
+    }
+
+    public static void start(){
         Scanner dayScanner = new Scanner(System.in);
 
         System.out.println("Enter day of the week number: ");

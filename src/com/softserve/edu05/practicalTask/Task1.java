@@ -2,6 +2,10 @@ package com.softserve.edu05.practicalTask;
 
 public class Task1 {
     public static void main(String[] args) {
+        start();
+    }
+
+    public static void start(){
 
         int[] array = {4,-5,3,-2,76,11,52,-101,9,12};
 
@@ -39,7 +43,7 @@ public class Task1 {
         System.out.println("Count of positive numbers: " + positiveNumbers);
         System.out.println(positiveNumbers > negativeNumbers ? "More positive values" :
                 positiveNumbers == negativeNumbers ? "Count of positive and negative numbers is equal" :
-                    "More negatives");
+                        "More negatives");
 
     }
 }

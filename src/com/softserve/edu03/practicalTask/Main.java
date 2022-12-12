@@ -2,6 +2,10 @@ package com.softserve.edu03.practicalTask;
 
 public class Main {
     public static void main(String[] args) {
+        start();
+    }
+
+    public static void start(){
         //default constructor
         Employee employee1 = new Employee();
         employee1.setName("Vladyslav");
@@ -28,5 +32,6 @@ public class Main {
         System.out.println(employee3.getName() + " gets bonuses: " + employee3.getBonuses());
 
         System.out.println("Total sum: " + Employee.getTotalSum());
+
     }
 }

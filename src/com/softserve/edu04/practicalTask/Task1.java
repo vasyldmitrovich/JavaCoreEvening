@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 
 public class Task1 {
     public static void main(String[] args) throws IOException {
+        start();
+    }
+
+    public static void start() throws IOException{
 
         int n1,n2,n3;
         int oddsCounter = 0;
@@ -30,5 +34,6 @@ public class Task1 {
         }
 
         System.out.println("Odds count: " + oddsCounter);
+
     }
 }
