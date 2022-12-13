@@ -1,7 +1,5 @@
 package com.softserve.edu05.PracticalTasks5;
 
-import java.util.Arrays;
-
 public class Employee {
     private String name;
     private int numberDepartment;

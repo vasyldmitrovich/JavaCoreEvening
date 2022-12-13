@@ -1,11 +1,12 @@
 package com.softserve.edu04.HomeTask4;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
+        go();
+    }
 
+    public static void go(){
         HomeTask.checkBelonging();
 
         HomeTask.findMaxMin();

@@ -24,15 +24,14 @@ public class HomeTask {
     }
 
     public static void findMaxMin(){
-        Scanner in = new Scanner(System.in);
         System.out.println("Input a number: ");
-        int num1 = in.nextInt();
+        int num1 = myScanner.scan.nextInt();
 
         System.out.println("Input a number: ");
-        int num2 = in.nextInt();
+        int num2 = myScanner.scan.nextInt();
 
         System.out.println("Input a number: ");
-        int num3 = in.nextInt();
+        int num3 = myScanner.scan.nextInt();
 
         int max, min;
 
@@ -54,8 +53,7 @@ public class HomeTask {
 
     public static void writeNameError(){
         System.out.println("Input number error");
-        Scanner in = new Scanner(System.in);
-        int error = in.nextInt();
+        int error = myScanner.scan.nextInt();
 
         switch (error) {
             case 400: {System.out.println(HttpErrors.BAD_REQUEST.getName()); break;}
@@ -82,7 +80,7 @@ public class HomeTask {
 
     public static void equalDogsName(Dog dog1, Dog dog2) {
         if (dog1.equalsName(dog2)) {
-            System.out.println("These dogs have same names: "+dog1.toString() + " and "+dog2.toString());
+            System.out.println("These dogs have same names: "+dog1 + " and "+dog2);
         }
     }
 

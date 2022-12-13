@@ -14,16 +14,14 @@ public class HomeTask5 {
 
         System.out.println("Input " +lenght+ " numbers");
         for (int i = 0; i < lenght; i++) {
-            Scanner in = new Scanner(System.in);
-            array[i] = in.nextInt();
+            array[i] = myScanner.scan.nextInt();
         }
         return array;
     }
 
     static void resolveFirstTask(){
         System.out.println("Input number of month");
-        Scanner in = new Scanner(System.in);
-        int i = in.nextInt();
+        int i = myScanner.scan.nextInt();
 
         int qDays = HomeTask5.findQuantityDays(i);
 
@@ -125,8 +123,7 @@ public class HomeTask5 {
 
         System.out.println("Input year");
         int year;
-        Scanner in = new Scanner(System.in);
-        year = in.nextInt();
+        year = myScanner.scan.nextInt();
 
         Car.belongYear(year, car1, car2, car3, car4);
 

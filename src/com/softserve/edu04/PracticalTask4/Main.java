@@ -7,6 +7,10 @@ import java.io.InputStreamReader;
 public class Main {
 
     public static void main(String[] args) throws IOException{
+        go();
+    }
+
+    public static void go()throws IOException{
         int n1, n2, n3;
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,23 +26,21 @@ public class Main {
         n3 = Integer.parseInt(br.readLine());
 
         boolean noOdd = true;
-        if (PracticalTask.findOddNumber(n1)==true)
-        {PracticalTask.writeMessege("Number "+n1+" is odd"); noOdd = false;};
+        if (PracticalTask.findOddNumber(n1))
+        {PracticalTask.writeMessege("Number "+n1+" is odd"); noOdd = false;}
 
-        if (PracticalTask.findOddNumber(n2)==true)
-        {PracticalTask.writeMessege("Number "+n2+" is odd"); noOdd = false;};
+        if (PracticalTask.findOddNumber(n2))
+        {PracticalTask.writeMessege("Number "+n2+" is odd"); noOdd = false;}
 
-        if (PracticalTask.findOddNumber(n3)==true)
-        {PracticalTask.writeMessege("Number "+n3+" is odd"); noOdd = false;};
+        if (PracticalTask.findOddNumber(n3))
+        {PracticalTask.writeMessege("Number "+n3+" is odd"); noOdd = false;}
 
-        if (noOdd == true){PracticalTask.writeMessege("There aren't any odd numbers");}
+        if (noOdd){PracticalTask.writeMessege("There aren't any odd numbers");}
 
         //Days of the week
         PracticalTask.writeMessege("\nInput a number day of the week");
         int ndw;
         ndw = Integer.parseInt(br.readLine());
-
-        DaysWeek dw;
 
         switch (ndw){
             case 1: PracticalTask.showDayWeek(DaysWeek.MONDAY);
@@ -65,13 +67,13 @@ public class Main {
 
         //Product
         Product product1 = new Product("orange", 10, 5);
-        PracticalTask.writeMessege("\n"+product1.toString());
+        PracticalTask.writeMessege("\n"+product1);
         Product product2 = new Product("apple", 2, 10);
         PracticalTask.writeMessege(product2.toString());
         Product product3 = new Product("banana", 7.5, 7.5);
         PracticalTask.writeMessege(product3.toString());
         Product product4 = new Product("pear", 3, 9.5);
-        PracticalTask.writeMessege(product4.toString()+"\n");
+        PracticalTask.writeMessege(product4+"\n");
 
         PracticalTask.getExpensive(product1, product2, product3, product4);
 
