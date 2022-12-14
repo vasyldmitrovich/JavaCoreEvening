@@ -1,10 +1,5 @@
 package com.softserve.edu06.practicalTask;
 
-import com.softserve.edu06.homeTask.Bird;
-import com.softserve.edu06.homeTask.Eagle;
-import com.softserve.edu06.homeTask.NonFlyingBird;
-import com.softserve.edu06.homeTask.Penguin;
-
 import java.util.ArrayList;
 
 public class Main {
