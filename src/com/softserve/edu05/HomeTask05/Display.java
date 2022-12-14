@@ -2,6 +2,7 @@ package com.softserve.edu05.HomeTask05;
 
 public class Display {
 
+    /*In main method you should call some method, and in that method must be all that logic*/
     public static void main(String[] args) {
         int Numbers[] ={4, 12, -8, 6, -22, 33, 2, 45, 9,2 -21};
         int sum = 0;

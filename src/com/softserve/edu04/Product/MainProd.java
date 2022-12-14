@@ -8,6 +8,7 @@ public class MainProd {
         Prod Something3 = new Prod( "55", 1.3f, 45);
         Prod Something4 = new Prod("12", 15.3f, 99);
 
+        /*All that logic with if move to method, and there call that method*/
        if (Something1.getPrice() > Something2.getPrice() && Something1.getPrice() > Something3.getPrice() && Something1.getPrice() > Something4.getPrice());
        {System.out.println("Найдородчий продукт:" + Something1.getName() + "Кількість: " + Something1.getQuantity());
         }

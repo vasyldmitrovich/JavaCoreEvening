@@ -1,4 +1,4 @@
-package Third;
+package com.softserve.edu01;
 
 import java.io.BufferedReader;
 import java.io.IOException;

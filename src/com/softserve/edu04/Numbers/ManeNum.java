@@ -16,6 +16,9 @@ public class ManeNum {
         int Num3 = Integer.parseInt(br.readLine());
 
 
+        /*All that cole with if move to some method
+        * in that method you send parameter int
+        * that method must be type void, he only print needed message*/
         if (Num1 % 2 == 0) {
             System.out.println("Number " + Num1 + " is odd");
         }

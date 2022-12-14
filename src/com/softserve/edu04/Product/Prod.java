@@ -2,10 +2,12 @@ package com.softserve.edu04.Product;
 
 
 public class Prod {
+    /*Do not correct name fields, must be lowercase*/
     private String Name;
     private Float Price;
     private Integer Quantity;
 
+    /*Getters and Setters must be after Constructors*/
     public void setName(String Name) {
         this.Name =Name;
     }

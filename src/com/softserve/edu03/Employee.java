@@ -2,6 +2,7 @@ package com.softserve.edu03;
 
 public class Employee {
     private String name;
+    /*fields must bi in lower case, please rename fields and do change in all another methods*/
     private double Rate;
     private int Hours;
 
@@ -56,6 +57,7 @@ public class Employee {
                 '}';
     }
 
+    /*Must be in another class*/
     public static void main (String[] args){
             Employee Staff1 = new Employee("Іванов", 100, 210);
             Employee Staff2 = new Employee("Петров", 75, 220);
@@ -68,7 +70,7 @@ public class Employee {
         System.out.println(Staff3);
         System.out.print("His salary and bonuses is" + Staff3.getSalary() + Staff3.getBonuses());
 
-        System.out.print("Total Salery" + Employee.totalSum);
+        System.out.print("Total Salary" + Employee.totalSum);
 
     }
 

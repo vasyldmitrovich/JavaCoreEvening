@@ -40,7 +40,10 @@ public class Person {
     public String toString() {return "FirstName"  + firstName + ", LastName" + lastName + "Age" + age ;
     }
 
+    /*Move that main method to another class unique class like public class App*/
     public static void main (String[] args){
+
+        /*Rename variable to lower case */
         Person Person1 = new Person("Марія", "Петрова", 1952);
         Person Person2 = new Person("Анна", "Іванова", 1993);
         Person Person3 = new Person("Сергій", "Триньков", 1927);
