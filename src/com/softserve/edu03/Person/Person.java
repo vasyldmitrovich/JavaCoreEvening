@@ -1,4 +1,4 @@
-package com.softserve.edu03;
+package com.softserve.edu03.Person;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -8,7 +8,22 @@ public class Person {
     private int birthYear;
     protected int age;
 
-
+    public Person(){
+        firstName = "";
+        lastName = "";
+        birthYear = 0;
+    }
+    /*Please add spaces bet-wine methods*/
+    public Person(String firstName, String lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        birthYear = Integer.parseInt("");
+    }
+    public Person(String firstName, String lastName, int birthYear ){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthYear = birthYear;
+    }
     /*Getters and Setters must be after constructors*/
     public void setFirstName(String firstName){
         this.firstName = firstName;
@@ -30,29 +45,13 @@ public class Person {
         return this.birthYear;
     }
 
-    public Person(){
-        firstName = "";
-        lastName = "";
-        birthYear = 0;
-    }
-    /*Please add spaces bet-wine methods*/
-    public Person(String firstName, String lastName){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        birthYear = Integer.parseInt("");
-    }
-    public Person(String firstName, String lastName, int birthYear ){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthYear = birthYear;
-    }
-
-    /*Fields like that should not be here
+      /*Fields like that should not be here
     * they can be in some method
     * I recommend you use variable like that here where you will create person*/
-    LocalDate current_date = LocalDate.now();
-    int current_Year = current_date.getYear();
+
     public int getAge(){
+        LocalDate current_date = LocalDate.now();
+        int current_Year = current_date.getYear();
         age = current_Year - this.birthYear;
         if (age > 110 || age < 0){System.out.println("______ Вкажіть правильний рік народження _____");}
         return age;
@@ -72,7 +71,5 @@ public class Person {
     public void changeName(String fn, String ln){
         this.firstName = fn;
         this.lastName = ln;
-        /*return do not needed here because that method has type void*/
-        return;
     }
 }

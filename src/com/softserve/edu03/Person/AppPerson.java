@@ -1,5 +1,7 @@
-package com.softserve.edu03;
+package com.softserve.edu03.Person;
 
+
+import com.softserve.edu03.Person.Person;
 
 /*Divide practical and homework to different package*/
 public class AppPerson {

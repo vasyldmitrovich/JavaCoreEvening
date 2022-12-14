@@ -1,4 +1,4 @@
-package com.softserve.edu03;
+package com.softserve.edu03.Employee;
 
 public class AppEmployee {
     public static void main(String [] args) {
