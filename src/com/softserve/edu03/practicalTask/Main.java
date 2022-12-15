@@ -20,18 +20,24 @@ public class Main {
         //constructor with three params
         Employee employee3 = new Employee("Bogdan", 9.5, 16);
 
-        System.out.println(employee1);
-        System.out.println(employee2);
-        System.out.println(employee3);
-
-        System.out.println("Salary of " + employee1.getName() + ": " + employee1.getSalary());
-        System.out.println("Salary of " + employee2.getName() + ": " + employee2.getSalary());
-        System.out.println("Salary of " + employee3.getName() + ": " + employee3.getSalary());
+        getInfoAboutEmployees(new Employee[]{employee1,employee2,employee3});
+        getInfoAboutEmployeesSalaries(new Employee[]{employee1,employee2,employee3});
 
         //test getBonuses() method
         System.out.println(employee3.getName() + " gets bonuses: " + employee3.getBonuses());
 
         System.out.println("Total sum: " + Employee.getTotalSum());
+    }
 
+    public static void getInfoAboutEmployees(Employee ...employees){
+        for(Employee employee: employees){
+            System.out.println(employee);
+        }
+    }
+
+    public static void getInfoAboutEmployeesSalaries(Employee ...employees){
+        for (Employee employee: employees){
+            System.out.println("Salary of " + employee.getName() + ": " + employee.getSalary());
+        }
     }
 }

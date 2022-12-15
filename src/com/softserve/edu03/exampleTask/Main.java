@@ -10,14 +10,18 @@ public class Main {
         Student student2 = new Student("Oleh", 8.5);
         Student student3 = new Student("Andriy", 15.3);
 
-        System.out.println(student1);
-        System.out.println(student2);
-        System.out.println(student3);
+        getInfoAboutStudents(new Student[]{student1,student2,student3});
+
 
         System.out.println("Average rating: " + Student.avgRating());
         System.out.println("Total rating: " + Student.getTotalRating());
 
         System.out.println("Is " + student1.getName() + " better than " + student2.getName() + " ? " + student1.betterStudent(student2));
+    }
 
+    public static void getInfoAboutStudents(Student ...students){
+        for (Student s: students){
+            System.out.println(s);
+        }
     }
 }

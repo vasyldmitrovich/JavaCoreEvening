@@ -10,15 +10,26 @@ public class Task1 {
         int[] array = {4,-5,3,-2,76,11,52,-101,9,12};
 
         //find the biggest number
+        System.out.println("The biggest number in array is: " + findTheBiggestNumber(array));
+
+        //the sum of positive numbers in array
+        System.out.println("Sum of positive numbers is: " + getSumOfPositiveNumbers(array));
+
+        //the amount of negative numbers in array and amount of positive numbers
+        compareNegativeAndPositiveNumbersCount(array);
+    }
+
+    public static int findTheBiggestNumber(int[] array){
         int theBiggestNumber = 0;
         for(int i = 0; i < array.length; i++){
             if(array[i] > theBiggestNumber){
                 theBiggestNumber = array[i];
             }
         }
-        System.out.println("The biggest number in array is: " + theBiggestNumber);
+        return theBiggestNumber;
+    }
 
-        //the sum of positive numbers in array
+    public static int getSumOfPositiveNumbers(int[] array){
         int sumOfPositiveNumbers = 0;
 
         for (int i = 0; i < array.length; i++){
@@ -26,9 +37,10 @@ public class Task1 {
                 sumOfPositiveNumbers+=array[i];
             }
         }
-        System.out.println("Sum of positive numbers is: " + sumOfPositiveNumbers);
+        return sumOfPositiveNumbers;
+    }
 
-        //the amount of negative numbers in array and amount of positive numbers
+    public static void compareNegativeAndPositiveNumbersCount(int[] array){
         int negativeNumbers = 0;
         int positiveNumbers = 0;
 

@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task1 {
+
+    static int oddsCounter;
+
     public static void main(String[] args) throws IOException {
         start();
     }
@@ -12,7 +15,6 @@ public class Task1 {
     public static void start() throws IOException{
 
         int n1,n2,n3;
-        int oddsCounter = 0;
 
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter numbers: ");
@@ -22,6 +24,11 @@ public class Task1 {
         n2 = Integer.parseInt(bf.readLine());
         System.out.print("n3: ");
         n3 = Integer.parseInt(bf.readLine());
+        countOdds(n1,n2,n3);
+        System.out.println("Odds count: " + oddsCounter);
+    }
+
+    public static void countOdds(int n1, int n2, int n3){
 
         if(n1 % 2 == 0){
             oddsCounter++;
@@ -32,8 +39,5 @@ public class Task1 {
         if(n3 % 2 == 0){
             oddsCounter++;
         }
-
-        System.out.println("Odds count: " + oddsCounter);
-
     }
 }
