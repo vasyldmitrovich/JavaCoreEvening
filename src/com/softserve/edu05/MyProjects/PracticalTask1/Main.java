@@ -87,7 +87,7 @@ public class Main {
         } else if (amountPoz < amountNeg) {
             System.out.println("There are more negative numbers");
         } else {
-            System.out.println("There are equal amount negative and pozitive numbers");
+            System.out.println("There are equally amount negative and pozitive");
         }
 
 
