@@ -1,4 +1,4 @@
-package com.softserve.edu03;
+package com.softserve.edu03.Student;
 
 public class Student {
     private String name;
@@ -8,6 +8,17 @@ public class Student {
     private static int totalRating = 0;
     /*Plead use spaces between methods
     * And remember about consistency field constructors getters etc.*/
+    public Student(){
+        name = "";
+        rating = 0;
+        count++;
+    }
+    public Student(String name, float rating){
+        this.name = name;
+        this.rating = rating;
+        count++;
+        totalRating += rating;
+    }
     public void setName(String name){
         this.name = name;
     }
@@ -20,17 +31,7 @@ public class Student {
     public float getRating(){
         return rating;
     }
-    public Student(){
-        name = "";
-        rating = 0;
-        count++;
-    }
-    public Student(String name, float rating){
-        this.name = name;
-        this.rating = rating;
-        count++;
-        totalRating += rating;
-    }
+
     public static float totalRating(){
         return totalRating;
     }

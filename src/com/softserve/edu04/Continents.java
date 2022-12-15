@@ -15,7 +15,7 @@ public class Continents {
                 case "USA": case "Canada": case "Mexico":
                     System.out.println("Континент: " + Cont.AMERICA);
                     break;
-                case "Cnina": case "Korea": case "Japan":
+                case "China": case "Korea": case "Japan":
                     System.out.println("Континент: " + Cont.ASIA);
                     break;
                 case "France": case "Ukraine": case "Italy":
