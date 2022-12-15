@@ -11,20 +11,59 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    private static int length;
-    private static int[] num;
+    private  static int length = 0;
 
-    public static void main(String[] args) throws IOException {
+    public static void main (String[] args) throws IOException {
+
+        //Input numbers of array from keyboard
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter length of array: ");
+        System.out.print("Enter length of array: ");
         length = Integer.parseInt(br.readLine());
+        int[] array = new int[length];
+        int tmp = 0;
+        while (tmp < length) {
+            System.out.print("Enter int number " + tmp + ": ");
+            array[tmp] = Integer.parseInt(br.readLine());
+            tmp++;
+        }
 
-        do {
-            System.out.println("Enter integer number of array: ");
-            num[length] = Integer.parseInt(br.readLine());
-            --length;
-        } while (length < 0);
-
+        //Using methods
+        Main main = new Main();
+        main.findBiggestNum(array);
+        main.sumPozitiveNum(array);
+        main.amountOfNegative(array);
     }
 
+    //Find biggest number in array
+    public void findBiggestNum (int[] array) {
+        int max = array[0];
+        for(int i = 0; i < length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        System.out.println("Biggest number is: " + max);
+    }
+
+    //Calc suma pozitive numbers
+    public void sumPozitiveNum (int[] array){
+        int bigeestNum = 0;
+        for(int i = 0; i < length; i++) {
+            if (array[i] > 0) {
+                bigeestNum = bigeestNum + array[i];
+            }
+        }
+        System.out.println("Suma pozitive numbers: " + bigeestNum);
+    }
+
+    //Amount negative numbers
+    public void amountOfNegative (int[] array) {
+        int amount = 0;
+        for(int i = 0; i < length; i++) {
+            if (array[i] < 0) {
+                amount++;
+            }
+        }
+        System.out.println("Amount of negative numbers: " + amount);
+    }
 }
