@@ -37,12 +37,28 @@ public class Employee {
                 System.out.print(employees[i].name + ", ");
             }
         }
-
     }
 
     public static void orderBySal (Employee[] employees) {
-        for(int i = 0; i < employees.length; i++) {
+        boolean isSorted = false;
+        float tmp;
+        System.out.println("\nSorting in descending order: ");
 
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 0; i < employees.length - 1; i++) {
+                if (employees[i].salary > employees[i + 1].salary) {
+                    isSorted = false;
+                    tmp = employees[i + 1].salary;
+                    employees[i + 1].salary = employees[i].salary;
+                    employees[i].salary = tmp;
+                }
+            }
+        }
+
+        for (int i = employees.length - 1; i >= 0; i--) {
+            System.out.println("Salary " + i + " = " + employees[i].salary);
         }
     }
 }
+
