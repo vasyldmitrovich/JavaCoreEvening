@@ -32,6 +32,7 @@ public class Main {
         main.findBiggestNum(array);
         main.sumPozitiveNum(array);
         main.amountOfNegative(array);
+        main.amoundValues(array);
     }
 
     //Find biggest number in array
@@ -66,4 +67,30 @@ public class Main {
         }
         System.out.println("Amount of negative numbers: " + amount);
     }
+
+    //Calc values there are more: negative or positive
+    public void amoundValues (int[] array) {
+        int amountPoz = 0;
+        int amountNeg = 0;
+
+        for(int i = 0; i < length; i++) {
+            if (array[i] < 0) {
+                amountNeg++;
+            }
+            if (array[i] > 0) {
+                amountPoz++;
+            }
+        }
+
+        if(amountPoz > amountNeg) {
+            System.out.println("There are more pozitive numbers");
+        } else if (amountPoz < amountNeg) {
+            System.out.println("There are more negative numbers");
+        } else {
+            System.out.println("There are equal amount negative and pozitive numbers");
+        }
+
+
+    }
+
 }
