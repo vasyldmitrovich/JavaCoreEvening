@@ -1,6 +1,7 @@
 package com.softserve.edu05.PracticalTasks5;
 
 public class MyArrays {
+    /*That is good decision */
     static void findBiggest(int[] myArray){
         int max = myArray[0];
         int imax=1;

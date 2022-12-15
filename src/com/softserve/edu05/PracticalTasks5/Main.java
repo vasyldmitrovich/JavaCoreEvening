@@ -26,6 +26,7 @@ public class Main {
         Employee emp4 = new Employee("Vasilenko", 101, 11500);
         Employee emp5 = new Employee("Svitlenko", 103, 15500);
 
+        /*Instead, use 5 times print you car write cycle, that cycle will work 5 times*/
         System.out.println(emp1);
         System.out.println(emp2);
         System.out.println(emp3);

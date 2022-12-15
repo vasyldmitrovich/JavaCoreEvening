@@ -2,6 +2,7 @@ package com.softserve.edu05.HomeTasks5;
 
 import java.util.Scanner;
 
+/*This is nice use unique methods for solving each task. Good*/
 public class HomeTask5 {
     static int[] arrayDays ={31,28,31,30,31,30,31,31,30,31,30,31};
 

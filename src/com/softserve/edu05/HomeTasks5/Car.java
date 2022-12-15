@@ -1,6 +1,7 @@
 package com.softserve.edu05.HomeTasks5;
 
 public class Car {
+    /*Good decision use enum like model*/
     private Models model;
     private int year;
     private double engineCapacity;

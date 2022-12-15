@@ -24,6 +24,11 @@ public class HomeTask {
     }
 
     public static void findMaxMin(){
+        /*The next two line you can put in another method
+        * you send message in that method
+        * in that method you pring that messate
+        * after that you read keyboard and return from that method value what user input
+        * And after that write that data to variable*/
         System.out.println("Input a number: ");
         int num1 = myScanner.scan.nextInt();
 

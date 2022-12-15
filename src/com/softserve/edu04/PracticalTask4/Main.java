@@ -15,6 +15,8 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        /*Divide tasks in that method to difference method
+        * like first task in its own method, second task in another method etc.*/
         //odd numbers
         PracticalTask.writeMessege("Input a first number");
         n1 = Integer.parseInt(br.readLine());
@@ -26,6 +28,7 @@ public class Main {
         n3 = Integer.parseInt(br.readLine());
 
         boolean noOdd = true;
+        /*When you write code, use key combination for reformat code Ctrl+Alt+L*/
         if (PracticalTask.findOddNumber(n1))
         {PracticalTask.writeMessege("Number "+n1+" is odd"); noOdd = false;}
 
