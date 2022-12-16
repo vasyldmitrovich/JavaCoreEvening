@@ -9,53 +9,63 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
+    private int[] arrayOfDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    private static int numMouth;
+
     public static void main(String[] args) throws IOException {
-        int[] arrayOfDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Please enter number of month from 1 to 12: ");
-        int numMouth = Integer.parseInt(br.readLine());
+        numMouth = Integer.parseInt(br.readLine());
 
-        switch (numMouth){
+        Main main = new Main();
+        System.out.println(main.calcNumMouth(numMouth));
+
+    }
+
+    public String calcNumMouth (int numMouth) {
+        String output;
+        switch (numMouth) {
             case 1:
-                System.out.println("There are " + arrayOfDays[0] + " days.");
+                output = "There are " + arrayOfDays[0] + " days.";
                 break;
             case 2:
-                System.out.println("There are " + arrayOfDays[1] + " days.");
+                output = "There are " + arrayOfDays[1] + " days.";
                 break;
             case 3:
-                System.out.println("There are " + arrayOfDays[2] + " days.");
+                output = "There are " + arrayOfDays[2] + " days.";
                 break;
             case 4:
-                System.out.println("There are " + arrayOfDays[3] + " days.");
+                output = "There are " + arrayOfDays[3] + " days.";
                 break;
             case 5:
-                System.out.println("There are " + arrayOfDays[4] + " days.");
+                output = "There are " + arrayOfDays[4] + " days.";
                 break;
             case 6:
-                System.out.println("There are " + arrayOfDays[5] + " days.");
+                output = "There are " + arrayOfDays[5] + " days.";
                 break;
             case 7:
-                System.out.println("There are " + arrayOfDays[6] + " days.");
+                output = "There are " + arrayOfDays[6] + " days.";
                 break;
             case 8:
-                System.out.println("There are " + arrayOfDays[7] + " days.");
+                output = "There are " + arrayOfDays[7] + " days.";
                 break;
             case 9:
-                System.out.println("There are " + arrayOfDays[8] + " days.");
+                output = "There are " + arrayOfDays[8] + " days.";
                 break;
             case 10:
-                System.out.println("There are " + arrayOfDays[9] + " days.");
+                output = "There are " + arrayOfDays[9] + " days.";
                 break;
             case 11:
-                System.out.println("There are " + arrayOfDays[10] + " days.");
+                output = "There are " + arrayOfDays[10] + " days.";
                 break;
             case 12:
-                System.out.println("There are " + arrayOfDays[11] + " days.");
+                output = "There are " + arrayOfDays[11] + " days.";
                 break;
             default:
-                System.out.println("Number of month is wrong");
+                output = "Number of month is wrong";
                 break;
         }
+        return output;
     }
 }
