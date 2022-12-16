@@ -10,16 +10,24 @@ Calculate the sum of first 5 elements
 if they are positive or product of last 5 element in the other case.
 */
 public class Main {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter 10 integer numbers: ");
         int[] num = new int[10];
-        int sum = 0;
-        int prod = 1;
 
         for (int i = 0; i < num.length; i++) {
             num[i] = Integer.parseInt(br.readLine());
         }
+
+        Main main = new Main();
+        System.out.println("Suma: " + main.calcSuma(num));
+        System.out.println("Product: " + main.calcProd(num));
+
+    }
+
+    public int calcSuma (int[] num) {
+        int sum = 0;
 
         //find negative of first 5 elements
         int tmp = 0;
@@ -36,16 +44,31 @@ public class Main {
             }
         }
 
+        return sum;
+    }
+
+    public int calcProd (int[] num) {
+        int prod = 1;
+
+        //find negative of first 5 elements
+        int tmp = 0;
+        for (int i = 0; i < 5; i++) {
+            if (num[i] < 0) {
+                tmp++;
+            }
+        }
+
         //if there are negative of first 5 elements, we calc sum last 5 elements.
         if (tmp != 0) {
             for (int i = num.length - 1; i >= 5; i--) {
                 prod = num[i] * prod;
             }
+        } else {
+            prod = 0;
         }
 
-        System.out.println("Suma: " + sum);
-        System.out.println("Product: " + prod);
-
-
+        return prod;
     }
+
+
 }
