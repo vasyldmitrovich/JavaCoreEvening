@@ -1,4 +1,4 @@
-package com.softserve.edu5.homeWork.Month;
+package com.softserve.edu05.homeWork.Month;
 
 import java.util.Scanner;
 

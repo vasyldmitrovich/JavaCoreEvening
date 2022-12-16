@@ -1,4 +1,4 @@
-package com.softserve.edu5.practicalTask;
+package com.softserve.edu05.practicalTask;
 
 public class ArrInt {
     public static void main(String[] args) {

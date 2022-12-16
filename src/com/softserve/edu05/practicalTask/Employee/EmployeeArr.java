@@ -1,4 +1,4 @@
-package com.softserve.edu5.practicalTask.Employee;
+package com.softserve.edu05.practicalTask.Employee;
 
 import java.util.Scanner;
 

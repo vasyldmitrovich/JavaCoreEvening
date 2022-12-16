@@ -1,4 +1,4 @@
-package com.softserve.edu5.homeWork.SumNumber;
+package com.softserve.edu05.homeWork.SumNumber;
 
 import java.util.Scanner;
 

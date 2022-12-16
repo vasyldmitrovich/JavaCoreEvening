@@ -1,4 +1,4 @@
-package com.softserve.edu5.practicalTask.Employee;
+package com.softserve.edu05.practicalTask.Employee;
 
 public class EmployeeArrApp {
     public static void creatEmpl(){

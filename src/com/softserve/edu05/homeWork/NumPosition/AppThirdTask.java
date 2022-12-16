@@ -1,4 +1,4 @@
-package com.softserve.edu5.homeWork.NumPosition;
+package com.softserve.edu05.homeWork.NumPosition;
 
 public class AppThirdTask {
     public static void main(String[] args) {
