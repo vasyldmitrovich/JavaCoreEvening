@@ -17,27 +17,35 @@ public class Main {
         int sum = 0;
         int prod = 1;
 
-        System.out.println(num.length);
-        for(int i = 0; i < num.length; i++) {
+        for (int i = 0; i < num.length; i++) {
             num[i] = Integer.parseInt(br.readLine());
-//            System.out.println("num " + i + ": " + num[i]);
         }
 
-//        for(int i = 0; i < num.length; i++) {
-//            System.out.println(i + ": " + num[i] + ", ");
-//        }
-
-
-        for(int i = 0; i < num.length; i++) {
-            if(num[i] > 0) {
-                sum = num[i] + sum;
+        //find negative of first 5 elements
+        int tmp = 0;
+        for (int i = 0; i < 5; i++) {
+            if (num[i] < 0) {
+                tmp++;
             }
-        break;
         }
-        System.out.println(sum);
 
+        //if there aren't negative of first 5 elements, we calc sum first 5 elements.
+        if (tmp == 0) {
+            for (int i = 0; i < 5; i++) {
+                sum += num[i];
+            }
+        }
+
+        //if there are negative of first 5 elements, we calc sum last 5 elements.
+        if (tmp != 0) {
+            for (int i = num.length - 1; i >= 5; i--) {
+                prod = num[i] * prod;
+            }
+        }
+
+        System.out.println("Suma: " + sum);
+        System.out.println("Product: " + prod);
 
 
     }
-
 }
