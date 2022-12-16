@@ -1,5 +1,6 @@
 package com.softserve.edu05.apptest;
 
+
 import org.junit.*;
 
 public class CalcTest {
