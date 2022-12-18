@@ -1,4 +1,4 @@
-package softserve.edu06.PracticalTasks.Line;
+package com.softserve.edu06.PracticalTasks.Line;
 
 public class Main {
     public static void main(String[] args) {

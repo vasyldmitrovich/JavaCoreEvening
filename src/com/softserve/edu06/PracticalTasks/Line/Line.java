@@ -1,4 +1,4 @@
-package softserve.edu06.PracticalTasks.Line;
+package com.softserve.edu06.PracticalTasks.Line;
 
 public class Line extends Point{
      Point x1y1;

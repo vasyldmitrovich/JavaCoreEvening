@@ -1,8 +1,12 @@
-package softserve.edu06.PracticalTasks.Cars;
+package com.softserve.edu06.PracticalTasks.Cars;
 
-import softserve.edu06.PracticalTasks.Cars.Car;
+import com.softserve.edu06.PracticalTasks.Cars.Car;
 
 public class Sedan extends Car {
+
+    public Sedan() {
+        super();
+    }
 
     public Sedan(String model, int maxSpeed, int yearOfManufacture) {
         super(model, maxSpeed, yearOfManufacture);

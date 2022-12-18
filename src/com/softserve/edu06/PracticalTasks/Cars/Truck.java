@@ -1,6 +1,6 @@
-package softserve.edu06.PracticalTasks.Cars;
+package com.softserve.edu06.PracticalTasks.Cars;
 
-import softserve.edu06.PracticalTasks.Cars.Car;
+import com.softserve.edu06.PracticalTasks.Cars.Car;
 
 public class Truck extends Car {
 

@@ -1,4 +1,4 @@
-package softserve.edu03.Homework;
+package com.softserve.edu03.Homework;
 
 public class Person {
     private String firstName;

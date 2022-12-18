@@ -1,4 +1,4 @@
-package softserve.edu05.PracticalTasks;
+package com.softserve.edu05.PracticalTasks;
 
 import java.sql.Array;
 import java.util.Scanner;

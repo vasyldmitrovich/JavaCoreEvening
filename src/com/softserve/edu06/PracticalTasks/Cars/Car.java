@@ -1,9 +1,12 @@
-package softserve.edu06.PracticalTasks.Cars;
+package com.softserve.edu06.PracticalTasks.Cars;
 
 public abstract class Car {
     public String model;
     public int maxSpeed;
     public int yearOfManufacture;
+
+    public Car() {
+    }
 
     public Car(String model, int maxSpeed, int yearOfManufacture) {
         this.model = model;

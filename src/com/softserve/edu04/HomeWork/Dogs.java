@@ -1,4 +1,4 @@
-package softserve.edu04.HomeWork;
+package com.softserve.edu04.HomeWork;
 
 
 public class Dogs {

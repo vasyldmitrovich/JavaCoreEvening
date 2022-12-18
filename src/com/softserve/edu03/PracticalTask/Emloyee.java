@@ -1,4 +1,4 @@
-package softserve.edu03.PracticalTask;
+package com.softserve.edu03.PracticalTask;
 
 public class Emloyee {
     private String name;

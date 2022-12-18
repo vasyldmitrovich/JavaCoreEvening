@@ -1,4 +1,4 @@
-package softserve.edu04.PracticalTasks.Country;
+package com.softserve.edu04.PracticalTasks.Country;
 
 import java.util.Scanner;
 

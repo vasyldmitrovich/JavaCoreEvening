@@ -1,4 +1,4 @@
-package softserve.edu04.PracticalTasks;
+package com.softserve.edu04.PracticalTasks;
 
 public class Products {
     String name;
