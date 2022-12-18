@@ -1,19 +1,20 @@
-package com.softserve.edu06.car;
+package com.softserve.edu06.practicalTasks.car;
 
-public class Truck extends Car{
+import com.softserve.edu06.practicalTasks.car.Car;
 
-    public Truck(){
+public class Sedan extends Car {
+
+    public Sedan(){
         model = " ";
         maxSpeed = 0;
         yearOfManufacture = 0;
     }
 
-    public Truck(String model, int maxSpeed, int yearOfManufacture){
+    public Sedan(String model, int maxSpeed, int yearOfManufacture){
         this.model = model;
         this.maxSpeed = maxSpeed;
         this.yearOfManufacture = yearOfManufacture;
     }
-
     @Override
     public void run() {
         System.out.println("Назва моделі: " + model + ", максимальна швидкість: " + maxSpeed + ", рік випуску: " + yearOfManufacture );

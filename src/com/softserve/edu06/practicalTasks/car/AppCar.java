@@ -1,8 +1,8 @@
-package com.softserve.edu06.car;
+package com.softserve.edu06.practicalTasks.car;
 
 public class AppCar {
     public static void main(String[] args) {
-        Car [] cars = new Car[4];
+        Car[] cars = new Car[4];
         cars[0] = new Truck("Ford", 210, 2010);
         cars[1] = new Truck("Hania", 240, 2015);
         cars[2] = new Sedan("Citroen", 240, 2016);

@@ -1,4 +1,4 @@
-package com.softserve.edu06.car;
+package com.softserve.edu06.practicalTasks.car;
 
 abstract public class Car {
     public String model;
