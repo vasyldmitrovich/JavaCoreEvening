@@ -4,7 +4,9 @@ public abstract class Car {
     private String model;
     private int maxSpeed;
     private int yearOfManufacture;
+
     public abstract void run();
+
     public abstract void stop();
 
     public Car(String model, int maxSpeed, int yearOfManufacture) {

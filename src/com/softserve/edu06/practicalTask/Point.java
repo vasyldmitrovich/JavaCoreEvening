@@ -8,6 +8,7 @@ public class Point {
         this.x = x;
         this.y = y;
     }
+
     public void print(){
         System.out.println(this.getClass().getSimpleName() + " is printing");
     }
