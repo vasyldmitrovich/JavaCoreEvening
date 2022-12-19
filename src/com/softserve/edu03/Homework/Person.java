@@ -21,6 +21,7 @@ public class Person {
         return birthYear;
     }
 
+    /*Move constructor before getters*/
     public Person() {
         this.firstName = "";
         this.lastname = "";
