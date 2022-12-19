@@ -11,23 +11,44 @@ if they are positive or product of last 5 element in the other case.
 */
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter 10 integer numbers: ");
-        int[] num = new int[10];
+    private int[] num;
+    private int sum, prod;
 
-        for (int i = 0; i < num.length; i++) {
-            num[i] = Integer.parseInt(br.readLine());
-        }
+    public static void main(String[] args) throws IOException {
 
         Main main = new Main();
-        System.out.println("Suma: " + main.calcSuma(num));
-        System.out.println("Product: " + main.calcProd(num));
+        int outputSuma, outputProd;
+
+        main.inputArray(new int[10]);
+
+        outputSuma = main.calcSuma(main.getNum());
+        outputProd = main.calcProd(main.getNum());
+        main.outputData(outputSuma, outputProd);
 
     }
 
+    public int[] inputArray (int[] in) throws IOException {
+        num = new int[in.length];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter 10 integer numbers: ");
+
+        for (int i = 0; i < in.length; i++) {
+            num[i] = Integer.parseInt(br.readLine());
+        }
+        return num;
+    }
+
+    public void outputData(int inSuma, int inProd) {
+        System.out.println("Suma: " + inSuma);
+        System.out.println("Product: " + inProd);
+    }
+
+    public int[] getNum() {
+        return num;
+    }
+
     public int calcSuma (int[] num) {
-        int sum = 0;
+        sum = 0;
 
         //find negative of first 5 elements
         int tmp = 0;
@@ -48,7 +69,7 @@ public class Main {
     }
 
     public int calcProd (int[] num) {
-        int prod = 1;
+        prod = 1;
 
         //find negative of first 5 elements
         int tmp = 0;
