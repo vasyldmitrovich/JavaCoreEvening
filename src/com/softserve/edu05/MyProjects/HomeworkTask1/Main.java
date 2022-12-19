@@ -14,13 +14,16 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Please enter number of month from 1 to 12: ");
-        numMouth = Integer.parseInt(br.readLine());
-
         Main main = new Main();
+        numMouth = main.inputData();
         System.out.println(main.calcNumMouth(numMouth));
 
+    }
+
+    public int inputData () throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Please enter number of month from 1 to 12: ");
+        return Integer.parseInt(br.readLine());
     }
 
     public String calcNumMouth (int numMouth) {
