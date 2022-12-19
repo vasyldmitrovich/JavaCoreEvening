@@ -18,5 +18,4 @@ abstract public class Car {
                ", Max speed = " + maxSpeed +
                 ", Year of manufactured = " + yearOfManufacture;
     }
-
 }
