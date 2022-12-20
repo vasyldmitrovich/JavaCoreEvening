@@ -7,12 +7,14 @@ public class ColorLine extends Line {
 
     }
 
-    public ColorLine(String color) {
+    public ColorLine(Point point1, Point point2, String color) {
+        super.point1 = point1;
+        super.point2 = point2;
         this.color = color;
     }
 
     public void print() {
-        System.out.println("color: " + color);
+        System.out.println("color: " + color + ", point1= " + point1 + ", point2= " + point2);
     }
 
     @Override

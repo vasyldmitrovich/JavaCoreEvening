@@ -1,13 +1,13 @@
 package com.softserve.edu06.MyProjects.PracticalTask2;
 
 public class Point {
-    private int x, y;
+    private double x, y;
 
     public Point() {
 
     }
 
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
