@@ -8,6 +8,7 @@ public class Main {
     }
 
     public static void start(){
+
         Scanner dayScanner = new Scanner(System.in);
 
         System.out.println("Enter day of the week number: ");
@@ -35,6 +36,7 @@ public class Main {
                 break;
             default:
                 System.out.println("Wrong enter data...");
+
         }
     }
 

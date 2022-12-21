@@ -26,6 +26,7 @@ public class Task1 {
         n3 = Integer.parseInt(bf.readLine());
         countOdds(n1,n2,n3);
         System.out.println("Odds count: " + oddsCounter);
+
     }
 
     public static void countOdds(int n1, int n2, int n3){

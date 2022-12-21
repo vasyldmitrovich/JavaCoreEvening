@@ -21,6 +21,7 @@ public class Main {
         Person person4 = new Teacher("Sergiy");
         Person person5 = new Teacher("Yevhen");
         System.out.println("____________________________");
+
         return new ArrayList<>(List.of(person1,person2,person3,person4,person5));
     }
 

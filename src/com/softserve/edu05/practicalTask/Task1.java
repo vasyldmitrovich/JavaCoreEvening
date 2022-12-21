@@ -51,6 +51,7 @@ public class Task1 {
                 negativeNumbers++;
             }
         }
+
         System.out.println("Count of negative numbers: " + negativeNumbers);
         System.out.println("Count of positive numbers: " + positiveNumbers);
         System.out.println(positiveNumbers > negativeNumbers ? "More positive values" :

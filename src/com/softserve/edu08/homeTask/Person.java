@@ -20,7 +20,7 @@ public abstract class Person implements Cloneable{
 
     public String info(){
         return "First name: " + this.fullName.getFirstName() + ", Last name: " + this.fullName.getLastName()
-                + ", Age: " + this.age;
+                + ", age: " + this.age;
     }
 
     public abstract String activity();
