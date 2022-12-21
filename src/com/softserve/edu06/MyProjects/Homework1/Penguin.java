@@ -4,7 +4,13 @@ public class Penguin extends NonFlyingBird{
 
     public Penguin() {}
 
-    public void fly() {
-        System.out.println("Penguin is NonFlyingBird ");
+    public Penguin(boolean feathers, boolean layEggs) {
+        super(feathers, layEggs);
     }
+
+    public void fly() {
+        System.out.println("Penguin is NonFlyingBird. Have feathers: " + super.getFeathers() +
+                ". LayEggs: " + super.getLayEggs());
+    }
+
 }

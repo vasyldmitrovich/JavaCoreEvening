@@ -4,8 +4,12 @@ public class Swallow extends FlyingBird{
 
     public Swallow() {}
 
-    public void fly() {
-        System.out.println("Swallow is FlyingBird");
+    public Swallow(boolean feathers, boolean layEggs) {
+        super(feathers, layEggs);
     }
 
+    public void fly() {
+        System.out.println("Swallow is FlyingBird. Have feathers: " + super.getFeathers() +
+                ". LayEggs: " + super.getLayEggs());
+    }
 }
