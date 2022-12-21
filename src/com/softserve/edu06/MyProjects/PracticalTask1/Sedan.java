@@ -14,13 +14,13 @@ public class Sedan extends Car {
     }
 
     @Override
-    void run() {
-
+    public void run() {
+        System.out.println("Car is running");
     }
 
     @Override
-    void stop() {
-
+    public void stop() {
+        System.out.println("Car is stopping");
     }
 
     public String getModel() {

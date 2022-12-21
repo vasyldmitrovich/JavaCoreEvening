@@ -10,18 +10,18 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        runProgram();
+    }
 
+    public static void runProgram() {
         Car[] cars = new Car[2];
         cars[0] = new Sedan("Ford Fiesta", 150, 2001);
         cars[1] = new Truck("Volkswagen Crafter", 120, 2005);
 
-        Main main = new Main();
-        main.output(cars);
-    }
-
-    public void output(Car[] in) {
-        for(Car car : in) {
+        for(Car car : cars) {
             System.out.println(car.toString());
+            car.run();
+            car.stop();
         }
     }
 
