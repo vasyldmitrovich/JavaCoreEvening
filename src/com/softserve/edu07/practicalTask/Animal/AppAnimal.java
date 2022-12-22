@@ -1,4 +1,4 @@
-package com.softserve.edu07.sort.practicalTask.Animal;
+package com.softserve.edu07.practicalTask.Animal;
 
 public class AppAnimal {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.softserve.edu07.sort.practicalTask.Person;
+package com.softserve.edu07.practicalTask.Person;
 
 public class AppPerson {
     public static void main(String[] args) {

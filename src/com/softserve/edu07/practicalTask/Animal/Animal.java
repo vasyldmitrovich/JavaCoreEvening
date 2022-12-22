@@ -1,4 +1,4 @@
-package com.softserve.edu07.sort.practicalTask.Animal;
+package com.softserve.edu07.practicalTask.Animal;
 
 public interface Animal {
     public void voice();

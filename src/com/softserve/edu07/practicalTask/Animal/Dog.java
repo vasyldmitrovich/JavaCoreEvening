@@ -1,10 +1,10 @@
-package com.softserve.edu07.sort.practicalTask.Animal;
+package com.softserve.edu07.practicalTask.Animal;
 
-public class Cat implements Animal {
-    final String ANIMAL = "Cat";
+public class Dog implements Animal {
+    String animal = "Dog";
     private String name;
 
-    public Cat(String name){
+    public Dog(String name){
         this.name =  name;
     }
     public String getName(){
@@ -15,9 +15,9 @@ public class Cat implements Animal {
     }
 
     public void voice(){
-        System.out.println("Meow!");
+        System.out.println("Woff!");
     };
     public void feed(){
-       System.out.println(name + ", are you hungry?");
+        System.out.println(name + ", are you hungry?");
     };
 }

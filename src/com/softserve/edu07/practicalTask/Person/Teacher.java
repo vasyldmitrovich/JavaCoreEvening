@@ -1,4 +1,4 @@
-package com.softserve.edu07.sort.practicalTask.Person;
+package com.softserve.edu07.practicalTask.Person;
 
 import com.softserve.edu06.practicalTasks.car.UserEnter;
 

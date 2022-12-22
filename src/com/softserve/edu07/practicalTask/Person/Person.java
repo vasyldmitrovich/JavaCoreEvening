@@ -1,4 +1,4 @@
-package com.softserve.edu07.sort.practicalTask.Person;
+package com.softserve.edu07.practicalTask.Person;
 
 abstract public class Person {
    String name;
