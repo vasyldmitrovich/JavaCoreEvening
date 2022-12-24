@@ -38,10 +38,10 @@ public class AppStud {
 		System.out.println("Original Arrays: " + students); // toString()
 
 		//
-		Arrays.sort(students);
+		//Arrays.sort(students);
 		//Arrays.sort(students, new Student.ByDestName());
 		//Arrays.sort(students, new Student().new ByAge());
-		//Arrays.sort(students, new Student.ByNameAndAge());
+		Arrays.sort(students, new Student.ByNameAndAge());
 		//Arrays.sort(students, new Student.ByNameAndAge());
 		//
 		//Collections.sort(students);
@@ -55,8 +55,8 @@ public class AppStud {
 //				}
 //		);
 		//
-		//System.out.println("Sorted Arrays: " + Arrays.toString(students));
-		System.out.println("Sorted Arrays: " + students);
+		System.out.println("Sorted Arrays: " + Arrays.toString(students));
+		//System.out.println("Sorted Arrays: " + students);
 		//
 
 	}
