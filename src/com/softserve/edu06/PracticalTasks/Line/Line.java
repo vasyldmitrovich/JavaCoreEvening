@@ -1,5 +1,6 @@
 package com.softserve.edu06.PracticalTasks.Line;
 
+/*It is not necessary extends Point*/
 public class Line extends Point{
      Point x1y1;
      Point x2y2;

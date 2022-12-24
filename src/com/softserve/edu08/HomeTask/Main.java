@@ -6,6 +6,7 @@ public class Main {
     }
 
     public static void run() throws CloneNotSupportedException {
+        /*If you work only with Student that means you not needed abstract class Person*/
         Student student1 = new Student(new FullName("Din", "Rid"), 25, 5);
         Student student2 = new Student(new FullName("Ben", "Gun"), 23, 4);
         Student student3 = (Student) student1.clone();
