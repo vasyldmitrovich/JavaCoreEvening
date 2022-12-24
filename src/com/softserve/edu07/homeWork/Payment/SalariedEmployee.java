@@ -1,10 +1,10 @@
-package com.softserve.edu07.homeWork;
+package com.softserve.edu07.homeWork.Payment;
 
 import com.softserve.edu06.practicalTasks.car.UserEnter;
 import static com.softserve.edu06.practicalTasks.car.UserEnter.numFloat;
 import static com.softserve.edu06.practicalTasks.car.UserEnter.numb;
 
-public class SalariedEmployee extends Employee implements Payment{
+public class SalariedEmployee extends Employee implements Payment {
     private String name;
     private float salary;
 

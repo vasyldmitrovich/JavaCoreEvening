@@ -1,4 +1,4 @@
-package com.softserve.edu07.homeWork;
+package com.softserve.edu07.homeWork.Payment;
 
 public abstract class Employee implements Comparable<Employee> {
     float salary;

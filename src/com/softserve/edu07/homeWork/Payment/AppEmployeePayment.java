@@ -1,7 +1,6 @@
-package com.softserve.edu07.homeWork;
+package com.softserve.edu07.homeWork.Payment;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class AppEmployeePayment{
     public static void main(String[] args) {
