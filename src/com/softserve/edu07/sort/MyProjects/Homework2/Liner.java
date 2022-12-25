@@ -11,7 +11,7 @@ public class Liner extends WaterVehicle{
 
     @Override
     public void isSailing() {
-        System.out.println("Liner is sailing");
+        System.out.print("Liner is sailing. ");
     }
 
     public int getFloors() {

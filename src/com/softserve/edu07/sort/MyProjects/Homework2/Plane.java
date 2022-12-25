@@ -24,6 +24,6 @@ public class Plane extends FlyingVehicle{
 
     @Override
     public void land() {
-        System.out.println("Plane is standing on the land");
+        System.out.print("Plane is standing on the land. ");
     }
 }

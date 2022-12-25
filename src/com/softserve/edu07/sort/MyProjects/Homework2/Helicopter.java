@@ -12,11 +12,11 @@ public class Helicopter extends FlyingVehicle{
 
     @Override
     public void fly() {
-        System.out.println("Helicopter is flying");
+        System.out.println("Helicopter is flying. ");
     }
 
     @Override
     public void land() {
-        System.out.println("Helicopter is standing on the land");
+        System.out.println("Helicopter is standing on the land. ");
     }
 }

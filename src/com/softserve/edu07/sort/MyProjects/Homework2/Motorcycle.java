@@ -19,6 +19,6 @@ public class Motorcycle extends GroundVehicle{
 
     @Override
     public void drive() {
-        System.out.println("Motorcycle is driving");
+        System.out.print("Motorcycle is driving. ");
     }
 }
