@@ -4,15 +4,14 @@ abstract public class Bird {
     private boolean feathers;
     private boolean layEggs;
 
-    public Bird (boolean feathers, boolean layEggs) {
-        this.feathers = feathers;
-        this.layEggs = layEggs;
+    public Bird() {
     }
 
     public Bird (boolean feathers, boolean layEggs) {
         this.feathers = feathers;
         this.layEggs = layEggs;
     }
+
 
     public boolean getFeathers () {
         return feathers;
