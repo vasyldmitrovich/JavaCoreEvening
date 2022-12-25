@@ -7,6 +7,13 @@ public class Employee implements Comparable<Employee> {
     private String name;
     private float salary;
 
+    public static class BySal implements Comparator<Employee> {
+        @Override
+        public int compare(Employee emp1, Employee emp2) {
+            return (int) (-emp1.salary + emp2.salary);
+        }
+    }
+
     public Employee(String employeeId, String name) {
         this.employeeId = employeeId;
         this.name = name;
@@ -37,12 +44,5 @@ public class Employee implements Comparable<Employee> {
     public int compareTo(Employee emp) {
         return 0;
         //return (int)(-salary + emp.salary);
-    }
-
-    public static class BySal implements Comparator<Employee> {
-        @Override
-        public int compare(Employee emp1, Employee emp2) {
-            return (int) (-emp1.salary + emp2.salary);
-        }
     }
 }

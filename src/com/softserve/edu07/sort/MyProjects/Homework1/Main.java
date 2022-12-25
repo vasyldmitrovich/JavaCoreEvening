@@ -1,9 +1,10 @@
 package com.softserve.edu07.sort.MyProjects.Homework1;
 
-import com.softserve.edu07.sort.Student;
+/* Roman Sitko.
+* Lesson 7, Homework 1. About Payment
+ * */
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 public class Main {
