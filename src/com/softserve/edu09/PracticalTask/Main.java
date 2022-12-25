@@ -1,9 +1,7 @@
 package com.softserve.edu09.PracticalTask;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 
@@ -44,6 +42,9 @@ public class Main {
         for (int i = 0; i < myCollection.size(); i++) {
             System.out.printf("Position - %d, value of element - %d \n", i, myCollection.get(i));
         }
+
+        Collections.sort(myCollection);
+        System.out.println(myCollection + " Sorted");
 
 
     }
