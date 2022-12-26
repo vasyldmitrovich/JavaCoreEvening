@@ -1,5 +1,6 @@
 package com.softserve.edu05.TestMyProjects;
 
+import com.softserve.edu05.MyProjects.HomeworkTask2.Calculate;
 import com.softserve.edu05.MyProjects.HomeworkTask2.Main;
 import org.junit.*;
 
@@ -46,12 +47,12 @@ public class HomeworkTask2 {
         System.out.println("\t\t@Test testAdd1()");
         //Assert.fail("Not yet implemented");
 
-        Main main = new Main();
+        Calculate calculate = new Calculate();
         int[] array = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         int actual;
         int expected = 5;
 
-        actual = main.calcSuma(array);
+        actual = calculate.calcSuma(array);
 
         Assert.assertEquals(expected, actual);
         System.out.println("\t\t@Test testAdd1() - work correct");
@@ -62,12 +63,12 @@ public class HomeworkTask2 {
         System.out.println("\t\t@Test testAdd1()");
         //Assert.fail("Not yet implemented");
 
-        Main main = new Main();
+        Calculate calculate = new Calculate();
         int[] array = {1, -1, 1, 1, 1, 1, 2, 3, 1, 1};
         int actual;
         int expected = 6;
 
-        actual = main.calcProd(array);
+        actual = calculate.calcProd(array);
 
         Assert.assertEquals(expected, actual);
         System.out.println("\t\t@Test testAdd1() - work correct");
