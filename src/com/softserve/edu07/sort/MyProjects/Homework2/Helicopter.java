@@ -10,13 +10,23 @@ public class Helicopter extends FlyingVehicle{
         this.weight = weight;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+
+    public int getMaxHeight() {
+        return maxHeight;
+    }
+
+
     @Override
     public void fly() {
-        System.out.println("Helicopter is flying. ");
+        System.out.print("Helicopter is flying. ");
     }
 
     @Override
     public void land() {
-        System.out.println("Helicopter is standing on the land. ");
+        System.out.print("Helicopter is standing on the land. ");
     }
 }

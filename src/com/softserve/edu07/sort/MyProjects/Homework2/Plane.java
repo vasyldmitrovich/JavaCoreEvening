@@ -19,7 +19,7 @@ public class Plane extends FlyingVehicle{
 
     @Override
     public void fly() {
-        System.out.println("Plane is flying");
+        System.out.print("Plane is flying");
     }
 
     @Override

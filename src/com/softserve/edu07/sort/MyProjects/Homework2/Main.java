@@ -10,53 +10,53 @@ public class Main {
     }
 
     public static void run(){
-        ArrayList<WaterVehicle> waterVehicles = new ArrayList<>();
-        waterVehicles.add(new Liner(100, 5));
-        waterVehicles.add(new Boat(7, 1));
+        ArrayList<Passengers> passengers = new ArrayList<>();
+        passengers.add(new Liner(100, 5));
+        passengers.add(new Boat(7, 1));
+        passengers.add(new Plane(50, 1000));
+        passengers.add(new Helicopter(10, 1000, 5000));
+        passengers.add(new Bus(50, "Lviv-Kyiv"));
+        passengers.add(new Motorcycle(2, 200));
+        passengers.add(new Car(5, "Skoda Octavia"));
 
-        ArrayList<FlyingVehicle> flyingVehicles = new ArrayList<>();
-        flyingVehicles.add(new Plane(50, 1000));
-        flyingVehicles.add(new Helicopter(10, 1000, 5000));
-
-        ArrayList<GroundVehicle> groundVehicles = new ArrayList<>();
-        groundVehicles.add(new Bus(50, "Lviv-Kyiv"));
-        groundVehicles.add(new Motorcycle(2, 200));
-        groundVehicles.add(new Car(5, "Skoda Octavia"));
-
-        for(WaterVehicle waterVehicle : waterVehicles) {
-            if (waterVehicle instanceof Liner) {
-                waterVehicle.isSailing();
-                System.out.println("Passengers: " + waterVehicle.getPassengers() +
-                        ". Floors: " + ((Liner) waterVehicle).getFloors());
+        for(Passengers passenger : passengers) {
+            if (passenger instanceof WaterVehicle && passenger instanceof Liner) {
+                ((Liner) passenger).isSailing();
+                System.out.println("Passengers: " + passenger.getPassengers() +
+                        ". Floors: " + ((Liner) passenger).getFloors());
             }
-            if (waterVehicle instanceof Boat) {
-                waterVehicle.isSailing();
-                System.out.println("Passengers: " + waterVehicle.getPassengers() +
-                        ". Volume: " + ((Boat) waterVehicle).getVolume());
+            if (passenger instanceof WaterVehicle && passenger instanceof Boat) {
+                ((Boat) passenger).isSailing();
+                System.out.println("Passengers: " + passenger.getPassengers() +
+                        ". Volume: " + ((Boat) passenger).getVolume());
+            }
+            if (passenger instanceof FlyingVehicle && passenger instanceof Plane) {
+                ((Plane) passenger).fly();
+                System.out.println("Passengers: " + passenger.getPassengers() +
+                        ". Max Distance: " + ((Plane) passenger).getMaxDistance());
+            }
+            if (passenger instanceof FlyingVehicle && passenger instanceof Helicopter) {
+                ((Helicopter) passenger).fly();
+                System.out.println("Passengers: " + passenger.getPassengers() +
+                        ". Weight: " + ((Helicopter) passenger).getWeight() +
+                        ". Max height: " + ((Helicopter) passenger).getMaxHeight());
+            }
+            if (passenger instanceof GroundVehicle && passenger instanceof Bus) {
+                ((Bus) passenger).drive();
+                System.out.println("Passengers: " + passenger.getPassengers() +
+                        ". Route: " + ((Bus) passenger).getRoute());
+            }
+            if (passenger instanceof GroundVehicle && passenger instanceof Motorcycle) {
+                ((Motorcycle) passenger).drive();
+                System.out.println("Passengers: " + passenger.getPassengers() +
+                        ". Max speed: " + ((Motorcycle) passenger).getMaxSpeed());
+            }
+            if (passenger instanceof GroundVehicle && passenger instanceof Car) {
+                ((Car) passenger).drive();
+                System.out.println("Passengers: " + passenger.getPassengers() +
+                        ". Model " + ((Car) passenger).getModel());
             }
         }
-
-       // output FlyingVehicle...
-
-
-        for(GroundVehicle groundVehicle : groundVehicles) {
-            if (groundVehicle instanceof Bus) {
-                groundVehicle.drive();
-                System.out.println("Passengers: " + groundVehicle.getPassengers() +
-                        ". Route: " + ((Bus) groundVehicle).getRoute());
-            }
-            if (groundVehicle instanceof Motorcycle) {
-                groundVehicle.drive();
-                System.out.println("Passengers: " + groundVehicle.getPassengers() +
-                        ". MaxSpeed: " + ((Motorcycle) groundVehicle).getMaxSpeed());
-            }
-            if (groundVehicle instanceof Car) {
-                groundVehicle.drive();
-                System.out.println("Passengers: " + groundVehicle.getPassengers() +
-                        ". Model: " + ((Car) groundVehicle).getModel());
-            }
-        }
-
 
 
 
