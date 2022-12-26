@@ -1,5 +1,6 @@
 package com.softserve.edu05.TestMyProjects;
 
+import com.softserve.edu05.MyProjects.HomeworkTask1.CalcMounth;
 import com.softserve.edu05.MyProjects.HomeworkTask1.Main;
 import com.softserve.edu05.apptest.Calc;
 import org.junit.*;
@@ -46,11 +47,11 @@ public class HomeworkTask1 {
         System.out.println("\t\t@Test testAdd1()");
         //Assert.fail("Not yet implemented");
 
-        Main main = new Main();
+        CalcMounth calcMounth = new CalcMounth();
         String actual;
         String expected;
 
-        actual = main.calcNumMouth(1);
+        actual = calcMounth.calcNumMounth(1);
         expected = "There are 31 days.";
 
         Assert.assertEquals(expected, actual);
