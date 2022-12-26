@@ -1,6 +1,6 @@
 package com.softserve.edu08.MyProjects.PracticalTask1;
 
-public class Department {
+public class Department implements Cloneable{
 
     private String name;
     private Address address;
@@ -49,6 +49,10 @@ public class Department {
         address.city = city;
         address.building = building;
         address.street = street;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
