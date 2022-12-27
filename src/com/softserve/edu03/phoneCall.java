@@ -2,7 +2,7 @@ package softserve.edu03;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
-
+/*In your local project in Idea mark directory    src   like directory where is java code*/
 public class phoneCall {
 
 	public static void main(String[] args) {
