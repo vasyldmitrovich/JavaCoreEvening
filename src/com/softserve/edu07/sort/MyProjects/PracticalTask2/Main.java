@@ -10,6 +10,7 @@ public class Main {
 
     public static void run() {
 
+        /*This version is good*/
         ArrayList<Person> persons = new ArrayList<>();
         persons.add(new Student("Andriy", "KH-12"));
         persons.add(new Teacher("Rick", 12000.00f));

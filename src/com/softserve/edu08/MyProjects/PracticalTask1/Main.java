@@ -9,6 +9,7 @@ public class Main {
 
     }
 
+    /*All good :-)*/
     public static void run() throws CloneNotSupportedException {
         Department department = new Department("Roman", "Lviv", "Doroshenka", 5);
         System.out.println("Original: " + department);

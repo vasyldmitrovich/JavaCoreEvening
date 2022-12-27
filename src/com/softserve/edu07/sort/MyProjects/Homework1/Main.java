@@ -25,6 +25,7 @@ public class Main {
         //Arrays.sort(employees, new Employee.BySal());
 
         Collections.sort(employees, new Employee.BySal());
+//        Collections.sort(employees); // do not work because default compare return zero
         System.out.println("Sort array:" + employees);
     }
 }

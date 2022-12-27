@@ -23,6 +23,7 @@ public class Main {
         }
     }
 
+    /*The first version is good, second version you should not write*/
     //My version method. Use simple array.
     /*
     public static void run() {

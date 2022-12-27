@@ -27,6 +27,8 @@ public class Employee {
         int depNum = Integer.parseInt(br.readLine());
 
         // I don't know how to use exception
+        /*In that method you throw exception
+        * and catch in another method */
         if (depNum < 1 && depNum > 3) {
             throw new IOException("Input Department is no correct");
         }

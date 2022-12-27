@@ -40,6 +40,7 @@ public class Employee implements Comparable<Employee> {
         return "";
     }
 
+    /*Why that method return zero???*/
     @Override
     public int compareTo(Employee emp) {
         return 0;
