@@ -1,6 +1,8 @@
-package com.softserve.edu06.PracticalTasks;
+package com.softserve.edu06.PracticalTasks.Cars;
 
-public class Truck extends Car{
+import com.softserve.edu06.PracticalTasks.Cars.Car;
+
+public class Truck extends Car {
     public String type;
     public Truck(String model, int speed, int year, String type) {
         this.model = model;

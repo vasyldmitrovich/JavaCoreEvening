@@ -1,4 +1,4 @@
-package com.softserve.edu06.HomeTasks;
+package com.softserve.edu06.HomeTasks.Employees;
 
 public class Employee {
     protected String name;

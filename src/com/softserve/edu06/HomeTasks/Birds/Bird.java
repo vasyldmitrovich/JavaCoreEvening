@@ -1,4 +1,4 @@
-package com.softserve.edu06.HomeTasks;
+package com.softserve.edu06.HomeTasks.Birds;
 
 public abstract class Bird {
     protected boolean feathers;

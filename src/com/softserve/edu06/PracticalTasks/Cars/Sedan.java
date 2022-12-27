@@ -1,6 +1,8 @@
-package com.softserve.edu06.PracticalTasks;
+package com.softserve.edu06.PracticalTasks.Cars;
 
-public class Sedan extends Car{
+import com.softserve.edu06.PracticalTasks.Cars.Car;
+
+public class Sedan extends Car {
     public Sedan(String model, int speed, int year) {
         this.model = model;
         maxSpeed = speed;

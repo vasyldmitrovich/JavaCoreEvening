@@ -1,9 +1,11 @@
-package com.softserve.edu07.PtacticalTasks;
+package com.softserve.edu07.PtacticalTasks.Animals;
 
-public class Cat implements Animal{
+import com.softserve.edu07.PtacticalTasks.Animals.Animal;
+
+public class Dog implements Animal {
     private String name;
 
-    public Cat(String name) {
+    public Dog(String name) {
         this.name = name;
     }
 
@@ -17,17 +19,17 @@ public class Cat implements Animal{
 
     @Override
     public String voice() {
-        return "It can meow.";
+        return "It can barks";
     }
 
     @Override
     public String feed() {
-        return "It eat mice.";
+        return "It eat meat";
     }
 
     @Override
     public String toString() {
-        return "Cat{" +
+        return "Dog{" +
                 "name='" + name + '\'' +
                 '}';
     }

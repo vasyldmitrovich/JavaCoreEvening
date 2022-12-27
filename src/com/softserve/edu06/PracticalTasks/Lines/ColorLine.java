@@ -1,6 +1,6 @@
-package com.softserve.edu06.PracticalTasks;
+package com.softserve.edu06.PracticalTasks.Lines;
 
-public class ColorLine extends Line{
+public class ColorLine extends Line {
     String Color;
 
     public ColorLine(Point p1, Point p2, String color) {

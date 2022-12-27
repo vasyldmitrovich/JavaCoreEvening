@@ -1,5 +1,9 @@
 package com.softserve.edu06.HomeTasks;
 
+import com.softserve.edu06.HomeTasks.Birds.*;
+import com.softserve.edu06.HomeTasks.Employees.Developer;
+import com.softserve.edu06.HomeTasks.Employees.Employee;
+
 import java.util.Arrays;
 
 public class Main {

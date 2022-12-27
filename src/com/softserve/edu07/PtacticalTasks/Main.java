@@ -1,5 +1,11 @@
 package com.softserve.edu07.PtacticalTasks;
 
+import com.softserve.edu07.PtacticalTasks.Animals.Animal;
+import com.softserve.edu07.PtacticalTasks.Animals.Cat;
+import com.softserve.edu07.PtacticalTasks.Animals.Dog;
+import com.softserve.edu07.PtacticalTasks.Persons.*;
+import com.softserve.edu07.PtacticalTasks.Persons.Staff;
+
 public class Main {
     public static void main(String[] args) {
         go();

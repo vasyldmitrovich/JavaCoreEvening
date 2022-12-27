@@ -1,4 +1,4 @@
-package com.softserve.edu06.PracticalTasks;
+package com.softserve.edu06.PracticalTasks.Lines;
 
 public class Point {
     int x, y;

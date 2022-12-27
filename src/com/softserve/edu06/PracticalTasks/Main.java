@@ -1,5 +1,12 @@
 package com.softserve.edu06.PracticalTasks;
 
+import com.softserve.edu06.PracticalTasks.Cars.Car;
+import com.softserve.edu06.PracticalTasks.Cars.Sedan;
+import com.softserve.edu06.PracticalTasks.Cars.Truck;
+import com.softserve.edu06.PracticalTasks.Lines.ColorLine;
+import com.softserve.edu06.PracticalTasks.Lines.Line;
+import com.softserve.edu06.PracticalTasks.Lines.Point;
+
 import java.util.Arrays;
 
 public class Main {

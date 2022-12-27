@@ -1,6 +1,6 @@
-package com.softserve.edu06.HomeTasks;
+package com.softserve.edu06.HomeTasks.Birds;
 
-public class Chicken extends NonFlyingBird{
+public class Chicken extends NonFlyingBird {
     private String name;
 
     public Chicken(String name) {

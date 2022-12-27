@@ -1,6 +1,8 @@
-package com.softserve.edu06.HomeTasks;
+package com.softserve.edu06.HomeTasks.Birds;
 
-public class FlyingBird extends Bird{
+import com.softserve.edu06.HomeTasks.Birds.Bird;
+
+public class FlyingBird extends Bird {
     protected boolean predatory;
     public void fly(){
         System.out.println("It can fly.");

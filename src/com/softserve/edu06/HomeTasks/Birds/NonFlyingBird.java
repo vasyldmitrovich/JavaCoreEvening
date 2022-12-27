@@ -1,6 +1,8 @@
-package com.softserve.edu06.HomeTasks;
+package com.softserve.edu06.HomeTasks.Birds;
 
-public class NonFlyingBird extends Bird{
+import com.softserve.edu06.HomeTasks.Birds.Bird;
+
+public class NonFlyingBird extends Bird {
     protected boolean canSwimming;
 
     public void fly(){

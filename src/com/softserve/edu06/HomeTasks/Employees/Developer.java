@@ -1,6 +1,6 @@
-package com.softserve.edu06.HomeTasks;
+package com.softserve.edu06.HomeTasks.Employees;
 
-public class Developer extends Employee{
+public class Developer extends Employee {
     private String position;
 
     public Developer(String name, int age, double salary, String position) {

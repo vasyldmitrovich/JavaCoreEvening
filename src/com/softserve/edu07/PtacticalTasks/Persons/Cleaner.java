@@ -1,6 +1,6 @@
-package com.softserve.edu07.PtacticalTasks;
+package com.softserve.edu07.PtacticalTasks.Persons;
 
-public class Cleaner extends Staff{
+public class Cleaner extends Staff {
     final String TYPE_PERSON = "cleaner";
 
     private int amountOfSalary;
@@ -19,12 +19,12 @@ public class Cleaner extends Staff{
     }
 
     @Override
-    void salary() {
+    public void salary() {
         System.out.println("Salary is "+this.amountOfSalary+".");
     }
 
     @Override
-    void print() {
-        System.out.println("Name: "+this.getName()+" .Type is "+TYPE_PERSON+".");
+    public void print() {
+        System.out.println("Name: "+this.getName()+". Type is "+TYPE_PERSON+".");
     }
 }

@@ -1,16 +1,18 @@
-package com.softserve.edu06.HomeTasks;
+package com.softserve.edu06.HomeTasks.Birds;
 
-public class Eagle extends FlyingBird{
-   private String name;
+import com.softserve.edu06.HomeTasks.Birds.FlyingBird;
 
-    public Eagle(String name) {
-        super(true, true,true);
+public class Swallow extends FlyingBird {
+    private String name;
+
+    public Swallow(String name) {
+        super(true, true, false);
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return "\nEagle{" +
+        return "\nSwallow{" +
                 "name='" + name + '\'' +
                 ", predatory=" + predatory +
                 ", feathers=" + feathers +
@@ -20,7 +22,7 @@ public class Eagle extends FlyingBird{
 
     @Override
     public void fly() {
-        System.out.print("It is eagle. ");
+        System.out.print("It is swallow. ");
         super.fly();
     }
 }

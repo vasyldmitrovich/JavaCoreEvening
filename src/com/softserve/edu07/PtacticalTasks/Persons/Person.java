@@ -1,4 +1,4 @@
-package com.softserve.edu07.PtacticalTasks;
+package com.softserve.edu07.PtacticalTasks.Persons;
 
 public abstract class Person {
     private String name;
@@ -11,5 +11,5 @@ public abstract class Person {
         this.name = name;
     }
 
-    abstract void print();
+    public abstract void print();
 }
