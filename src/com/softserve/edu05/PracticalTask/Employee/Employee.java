@@ -30,6 +30,7 @@ public class Employee {
         this.salary = salary;
     }
 
+    /*Naming method is not correct, use Camel Case style*/
     public int getDepartment_number() {
         return department_number;
     }

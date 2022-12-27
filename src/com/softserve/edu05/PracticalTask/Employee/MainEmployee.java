@@ -19,6 +19,10 @@ public class MainEmployee {
                 new Employee("Mark", 2255, 300),
         };
 
+        /*To output a message to the user and read it from the keyboard,
+        create a separate method that accepts a string as a parameter,
+        which will be the message that should be output to the user and returns,
+        for example, an int, that is, what the user enters*/
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter department number:");
 

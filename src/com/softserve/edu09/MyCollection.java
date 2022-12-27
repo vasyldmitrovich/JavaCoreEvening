@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class MyCollection {
+    /*For each task
+    use separate methods
+    Each method accepts some parameters and performs one action, such as removing something from the collection
+    And in main method must be called only one method for example run()*/
     public static void main(String[] args) {
 
         List<Integer> myCollection = new ArrayList<>();
@@ -23,6 +27,8 @@ public class MyCollection {
         /*Find and save in list newCollection
         all positions of element more than 5 in the collection. Print newCollection*/
 
+        /*Use to resolve that task new method, and you send list in that method and method return new list,
+        * after that you create variable List<Integer> newCollection = (there use that method)*/
         List <Integer> newCollection = new ArrayList<>();
 
         for (Integer integer : myCollection) {
