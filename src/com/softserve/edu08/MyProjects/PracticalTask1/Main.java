@@ -11,12 +11,19 @@ public class Main {
 
     public static void run() throws CloneNotSupportedException {
         Department department = new Department("Roman", "Lviv", "Doroshenka", 5);
-        System.out.println(department);
+        System.out.println("Original: " + department);
 
-        Department department1 = (Department) department.clone();
-        System.out.println(department1);
-        department1.setName("Oksana");
+        try {
+            Department department1 = (Department) department.clone();
+            System.out.println("Copy: " + department1);
+            department1.setName("Oksana");
+            department1.getAddress().setBuilding(7);
 
-        System.out.println(department);
+            System.out.println("Copy after change: " + department1);
+            System.out.println("Original after change: " + department);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+
     }
 }

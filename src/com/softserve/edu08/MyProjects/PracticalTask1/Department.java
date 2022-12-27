@@ -6,7 +6,7 @@ public class Department implements Cloneable{
     private Address address;
 
 
-    class Address {
+    public class Address implements Cloneable{
         private String city, street;
         private int building;
 
@@ -19,6 +19,10 @@ public class Department implements Cloneable{
         public Address(String city, String street, int building) {
             this.city = city;
             this.street = street;
+            this.building = building;
+        }
+
+        public void setBuilding(int building) {
             this.building = building;
         }
 
@@ -55,6 +59,10 @@ public class Department implements Cloneable{
         this.name = name;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
     @Override
     public String toString() {
         return "Name: " + name +
@@ -65,7 +73,7 @@ public class Department implements Cloneable{
     protected Object clone() throws CloneNotSupportedException {
         Department copyOfDepartment = (Department) super.clone();
         copyOfDepartment.address = (Address) copyOfDepartment.address.clone();
-        return super.clone();
+        return copyOfDepartment;
     }
 
 /*    @Override
