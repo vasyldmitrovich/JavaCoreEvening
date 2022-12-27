@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
         run();
     }
-
+/*Good all is good*/
     public static void run() throws CloneNotSupportedException {
 
         Student student1 = new Student(new FullName("Vladyslav", "Siverskiy"), 19, 3);

@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    /*Respect, this realisation how use method in another methods is perfect, and code is nice to reed*/
     public static void main(String[] args) {
         run();
     }

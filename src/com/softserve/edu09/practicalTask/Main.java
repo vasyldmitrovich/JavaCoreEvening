@@ -8,6 +8,7 @@ public class Main {
     }
 
     public static void run(){
+        /*Cool, good decision use method which return List<Integer>*/
         List<Integer> myCollection = createListWithRandomNumbers(10);
         System.out.println("myCollection :" + myCollection);
 
