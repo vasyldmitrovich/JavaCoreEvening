@@ -10,6 +10,7 @@ public class Main {
         Student student3 = new Student("Ira", 6.3);
         System.out.println(getRatingSum());
         System.out.println(avgRating());
+        System.out.println(student1.betterStudent(student2));
 
     }
 }
