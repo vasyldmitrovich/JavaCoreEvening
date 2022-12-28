@@ -3,7 +3,7 @@ package com.softserve.edu05.Homework.Task_2;
 import java.util.Scanner;
 
 public class TenIntegers {
-    public static void tenIntegers() {
+    public void tenIntegers() {
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[10];
         for (int i = 0; i < array.length; i++) {
@@ -26,7 +26,5 @@ public class TenIntegers {
         }
     }
 
-    public static void main(String[] args) {
-        tenIntegers();
-    }
+    //public static void main(String[] args) {tenIntegers();}
 }
