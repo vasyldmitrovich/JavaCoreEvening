@@ -3,7 +3,7 @@ package com.softserve.edu05.Homework.Task_3;
 import java.util.Scanner;
 
 public class FiveIntegers {
-    public static void fiveIntegers(){
+    public void fiveIntegers(){
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[5];
         int productOfAllEvenNumbers = 1;
@@ -42,6 +42,7 @@ public class FiveIntegers {
     }
 
     public static void main(String[] args) {
-        fiveIntegers();
+        FiveIntegers fiveIntegers = new FiveIntegers();
+        fiveIntegers.fiveIntegers();
     }
 }

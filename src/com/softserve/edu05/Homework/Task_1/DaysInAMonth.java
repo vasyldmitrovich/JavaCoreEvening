@@ -16,7 +16,8 @@ public class DaysInAMonth {
         }
     }
 
-//    public static void main(String[] args) {
-//        System.out.println(daysInAMonth());
-//    }
+    public static void main(String[] args) {
+        DaysInAMonth daysInAMonth = new DaysInAMonth();
+        System.out.println(daysInAMonth.daysInAMonth());
+    }
 }
