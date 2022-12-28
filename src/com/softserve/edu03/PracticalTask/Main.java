@@ -7,6 +7,6 @@ public class Main {
         Employee employee1 = new Employee("Oleg", 11.5, 132);
         Employee employee2 = new Employee("Dima", 10.5, 156);
         Employee employee3 = new Employee("Sasha", 16.5, 144);
-        getTotalSum();
+        System.out.println(getTotalSum());
     }
 }

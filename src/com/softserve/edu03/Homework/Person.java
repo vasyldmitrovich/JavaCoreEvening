@@ -9,6 +9,12 @@ public class Person {
     private String lastname;
     private int birthYear;
 
+    public Person() {
+        this.firstName = "";
+        this.lastname = "";
+        this.birthYear = 0;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -19,13 +25,6 @@ public class Person {
 
     public int getBirthYear() {
         return birthYear;
-    }
-
-    /*Move constructor before getters*/
-    public Person() {
-        this.firstName = "";
-        this.lastname = "";
-        this.birthYear = 0;
     }
 
     public Person(String firstName, String lastname) {

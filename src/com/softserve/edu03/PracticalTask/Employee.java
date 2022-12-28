@@ -46,9 +46,8 @@ public class Employee {
         return e.getRate() * e.getHours();
     }
 
-    /*That method must return double, print use in main method and in that print paste that double data*/
-    public static void getTotalSum() {
-        System.out.println(totalSum);
+    public static double getTotalSum() {
+        return totalSum;
     }
 
     @Override
