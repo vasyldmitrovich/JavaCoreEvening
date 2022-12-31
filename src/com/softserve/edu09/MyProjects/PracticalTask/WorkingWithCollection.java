@@ -46,10 +46,10 @@ public class WorkingWithCollection {
     }
 
     public void printAfterInsert() {
+        System.out.println("Add 3 element:");
         myCollection.add(2,1);
         myCollection.add(5,-4);
         myCollection.add(8,-3);
-
         for (int i = 0; i < myCollection.size(); i++) {
             System.out.println("position – " + i +
                     ", value of element – " + myCollection.get(i));
