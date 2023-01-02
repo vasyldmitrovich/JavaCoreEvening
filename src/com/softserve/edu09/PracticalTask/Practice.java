@@ -28,12 +28,6 @@ public class Practice {
         myCollection.removeIf(n->(n>20));
         return myCollection;
     }
-//
-//            myCollection.removeIf(e -> e > 20);
-//            System.out.println(myCollection + "elements, which are greater then 20");
-//        }
-//        return myCollection;
-//    }
 
     public static List<Integer> insertElements(List<Integer> myCollection) {
         myCollection.add(2, 1);
