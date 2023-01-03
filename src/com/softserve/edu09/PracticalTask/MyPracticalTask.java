@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Random;
 
 public class MyPracticalTask {
-    public static List<Integer> createCollection(int capacity){
+    public static List<Integer> createCollection(int size){
         List <Integer> myCollection = new ArrayList<>();
 
         Random rn = new Random();
-        for (int i = 0; i < capacity; i++) {
+        for (int i = 0; i < size; i++) {
             myCollection.add(rn.nextInt(40));
         }
 
