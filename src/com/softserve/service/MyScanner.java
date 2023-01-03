@@ -16,7 +16,7 @@ public class MyScanner {
 
     public static String writeInputString(String s){
         System.out.println(s);
-        String res = myScanner.scan.next();
+        String res = myScanner.scan.nextLine();
 
         return res;
     }
