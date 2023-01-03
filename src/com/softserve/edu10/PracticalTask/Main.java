@@ -45,17 +45,15 @@ public class Main {
        Scanner sc = new Scanner(System.in);
        System.out.println("enter Name:");
        String name = sc.nextLine();
-       for (Map.Entry<Integer, String> entry : employeeMap.entrySet()){
-           if (employeeMap.containsValue(name)){
-               System.out.println(entry.getKey());
-               break;
-           }
-           else {
+           for (Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
+               if (name.equals(entry.getValue())) {
+                   System.out.println(entry.getKey());
+                   break;
+               }
+               else {
                System.out.println("can't find this name");
                break;
+               }
            }
-       }
    }
-
-
 }
