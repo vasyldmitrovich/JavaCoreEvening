@@ -68,7 +68,7 @@ public class Main {
     }
 
     public static void checkName(String name){
-        String pattern = "\\w{3,15}";
+        String pattern = "^\\w{3,15}$";
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(name);
 
