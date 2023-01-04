@@ -16,14 +16,14 @@ public class UserEnter {
 
     public static int UserEnterNum(String quest){
         Scanner inp = new Scanner(System.in);
-        System.out.println(quest);
+        System.out.print(quest);
         numb = inp.nextInt();
         return numb;
     }
 
     public static float UserEnterNumFloat(String quest){
         Scanner inp = new Scanner(System.in);
-        System.out.println(quest);
+        System.out.print(quest);
         numFloat = inp.nextFloat();
         return numFloat;
     }
