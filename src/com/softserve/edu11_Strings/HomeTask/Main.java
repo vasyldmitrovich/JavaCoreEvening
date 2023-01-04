@@ -22,7 +22,8 @@ public class Main {
         s1 = deleteExtraSpaces(s1);
         System.out.println(s1);
 
-        findCurrency();
+        String s = MyScanner.writeInputString("Input text with currency");
+        findCurrency(s);
     }
 
     public static String findLongestWord(String s){
@@ -76,9 +77,7 @@ public class Main {
        return s;
     }
 
-    public static void findCurrency(){
-        String s = MyScanner.writeInputString("Input text with currency");
-
+    public static void findCurrency(String s){
         Pattern p = Pattern.compile("\\$\\d+\\.\\d{2}");
         Matcher m = p.matcher(s);
 
