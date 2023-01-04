@@ -21,31 +21,13 @@ public class Main {
         employeeMap.put(7, "Dmytro Shylyak");
 
 
-        System.out.println(employeeMap);
-        for(Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
-            if (employeeMap.containsValue("Dmytro Shylyak")) {
-                System.out.println(employeeMap.get(entry.getKey()));
-//                System.out.println("rrr");
-            }
-        }
-
-//        for(Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
-//            if(entry.getValue().equals("Dmytro Shylyak")) {
-//                System.out.println("Key = " + entry.getKey());
-//            }
-//        }
-
-
-
-/*
-
+//        System.out.println(employeeMap);
         for(Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
             System.out.println("Key = " + entry.getKey() + ", value = " + entry.getValue());
         }
-*/
 
 
-/*        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int key = -1;
         do {
             System.out.print("Enter key: ");
@@ -57,7 +39,6 @@ public class Main {
                 System.out.print("Wrong key\n");
             }
         } while (employeeMap.containsKey(key));
-*/
 
 
 
@@ -72,14 +53,15 @@ public class Main {
             }
         }*/
 
+        String value = "";
+        System.out.print("Enter value: ");
+        value = br.readLine();
 
-
-
-//        for(Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
-//            if(entry.getKey().equals(key)) {
-//                System.out.println();
-//            }
-//        }
+        for(Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
+            if(entry.getValue().equals(value)) {
+                System.out.println("Key = " + entry.getKey());
+            }
+        }
 
     }
 }
