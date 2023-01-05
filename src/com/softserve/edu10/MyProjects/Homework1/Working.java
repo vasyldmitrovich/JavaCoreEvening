@@ -34,22 +34,34 @@ public class Working {
 //        System.out.println(uniqueValues);
 
         Map<String, String> duplicatMap = new HashMap<>();
-
-        int i = 0;
+        int index = 0;
         String value, key;
+
         for(Map.Entry<String, String> entry: person.entrySet()) {
             value = entry.getValue();
             key = entry.getKey();
-
             if(duplicatMap.containsKey(value) ) {
-                duplicatMap.put(value, key);//duplicatMap.get(value)+ ", " + key);
-                i++;
+                duplicatMap.put(value, key);// duplicatMap.get(value)+ ", " + key);
+                index++;
             } else {
-                //duplicatMap.put(value, key);
+                duplicatMap.put(value, key);
             }
         }
-        System.out.println("duplicatMap: " + duplicatMap);
-        System.out.println(i);
+
+        if (index <= 1) {
+            System.out.println("There are at less two persons with the same firstName");
+        } else {
+            System.out.println("There are at more two persons with the same firstName");
+        }
+    }
+
+    public void removeFirstName(String firstName) {
+//        for(Map.Entry<String, String> entry : person.entrySet()) {
+//            if (entry.getValue().equals(firstName)) {
+                person.remove(1);
+//            }
+//        }
+        System.out.println(person);
     }
 
 

@@ -71,7 +71,8 @@ public class Main {
 
         Working workingMap = new Working(personalMap);
         workingMap.printMap();
-        workingMap.findDuplicateFirstName();
+        //workingMap.findDuplicateFirstName();
+        workingMap.removeFirstName("Ira");
 
 
     }
