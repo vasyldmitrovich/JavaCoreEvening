@@ -15,8 +15,6 @@ public class Main {
         runFirst();
         runSecond();
         runThird();
-        String str = "asd;";
-
     }
 
     static void runFirst() {
