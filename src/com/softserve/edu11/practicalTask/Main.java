@@ -7,12 +7,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
+
+
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
         runFirst();
         runSecond();
         runThird();
+        String str = "asd;";
+
     }
 
     static void runFirst() {
