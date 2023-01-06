@@ -17,6 +17,7 @@ public class Edu04Part6 {
         }
     }
 
+    /*That is correct decision for take data from user*/
     static public int numberError() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the number of error");

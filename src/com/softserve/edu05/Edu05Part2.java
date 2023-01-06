@@ -18,6 +18,8 @@ public class Edu05Part2 {
         employees[2] = new Employee("Alex", 302, 2500);
         employees[3] = new Employee("Mason", 307, 2350);
         employees[4] = new Employee("NeMichael", 304, 3400);
+
+        /*For input data from user create unique method and use there that method*/
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter number of department (3 symbol): ");

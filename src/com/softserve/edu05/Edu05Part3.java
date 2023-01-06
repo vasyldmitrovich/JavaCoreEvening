@@ -14,6 +14,7 @@ public class Edu05Part3 {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Please enter one of twelve months: ");
         int month = Integer.parseInt(bufferedReader.readLine());
+        /*For resolve that task you should create Enum month and compare data from user, what user input, is that correct enum*/
         String[] months = {"January", "February", "March ", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         System.out.println("The month you entered is: " + months[month - 1]);
     }

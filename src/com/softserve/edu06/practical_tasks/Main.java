@@ -3,6 +3,7 @@ package com.softserve.edu06.practical_tasks;
 import java.awt.*;
 
 public class Main {
+    /*Good $-)*/
     public static void main(String[] args) {
         runCar();
         drawLine();
