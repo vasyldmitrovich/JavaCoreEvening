@@ -1,4 +1,5 @@
-package com.softserve.edu07.practical_tasks;
+package com.softserve.edu07.practical_tasks.animal;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -6,12 +7,11 @@ public class Main {
     }
 
     public static void animal() {
+        Animal[] animals = {new Cat("Tom"), new Dog("Spike")};
 
-        Animal[] animals = {new Cat(),
-                new Dog()};
         for (Animal animal : animals) {
-            animal.feed();
             animal.voice();
+            animal.feed();
 
         }
     }
