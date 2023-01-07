@@ -1,0 +1,10 @@
+package com.softserve.edu07.homework.payment;
+
+import java.util.Comparator;
+
+public class SortSalary implements Comparator<Employee> {
+    @Override
+    public int compare(Employee o1, Employee o2) {
+        return o1.calculatePay() - o2.calculatePay();
+    }
+}
