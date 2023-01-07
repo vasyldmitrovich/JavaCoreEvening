@@ -1,7 +1,5 @@
 package com.softserve.edu05.Homework.Task_4;
 
-import com.softserve.edu05.PracticalTask.Task_2.Employee;
-
 import java.util.Scanner;
 
 public class Car {
@@ -19,36 +17,42 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "type='" + type + '\'' +
-                ", yearOfProduction=" + yearOfProduction +
-                ", engineCapacity=" + engineCapacity +
-                '}';
+        return "\nType = " + type +
+                ". Year of production = " + yearOfProduction +
+                ". Engine capacity = " + engineCapacity +
+                '.';
     }
 
-    public static void modelByYear(Car[] cars) {
+    public int inputYearOfProd() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the year of production of the car to see the models.");
         int a = scanner.nextInt();
         scanner.close();
-        int b = 0;
-        while (b < cars.length) {
-            if (cars[b].yearOfProduction != a & b == cars.length - 1) {
-                System.out.println("There is no department with this number.");
-                break;
-            } else if (cars[b].yearOfProduction != a) {
-                b++;
-            } else {
-                for (Car car : cars) {
-                    if (car.yearOfProduction == a) {
-                        System.out.println(car.type);
-                    }
-                }
-                break;
+        return a;
+    }
+
+    public Car[] modelByYear(Car[] cars) {
+        int a = inputYearOfProd();
+        int count = 0;
+        int i = 0;
+        for (Car car : cars) {
+            if (car.yearOfProduction == a) {
+                count++;
             }
         }
+        if (count == 0) {
+            return null;
+        }
+        Car[] cars1 = new Car[count];
+        for (Car car : cars) {
+            if (car.yearOfProduction == a) {
+                cars1[i] = car;
+                i++;
+            }
+        }
+        return cars1;
     }
-    public static void sortByYear(Car[] cars) {
+    public Car[] sortByYear(Car[] cars) {
         int tmp;
         for (int i = 0; i < cars.length - 1; i++) {
             for (int j = i + 1; j < cars.length; j++) {
@@ -59,9 +63,6 @@ public class Car {
                 }
             }
         }
-        System.out.println("Cars sorted by year of release:");
-        for (Car car : cars) {
-            System.out.println(car);
-        }
+        return cars;
     }
 }

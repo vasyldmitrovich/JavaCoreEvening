@@ -1,5 +1,7 @@
 package com.softserve.edu05.Homework.Task_4;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Car[] cars = {
@@ -8,8 +10,9 @@ public class Main {
                 new Car("Ford", 1998, 2.5),
                 new Car("Zaporozhetsk", 2022, 8.5),
         };
-        Car.modelByYear(cars);
+        var car = new Car();
+        System.out.println(Arrays.toString(car.modelByYear(cars)));
         System.out.println();
-        Car.sortByYear(cars);
+        System.out.println(Arrays.toString(car.sortByYear(cars)));
     }
 }
