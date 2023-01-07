@@ -1,26 +1,15 @@
 package com.softserve.edu10.MyProjects.Homework1;
 
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
-public class Working {
+public class ClassMap {
+
     private Map<String, String> person;
 
-    public Working () {}
-
-    public Working(Map<String, String> person) {
+    public ClassMap(Map<String, String> person) {
         this.person = person;
-    }
-
-
-    public boolean union(Set set1, Set set2) {
-        return set1.addAll(set2);
-    }
-
-    public boolean intersect(Set set1, Set set2) {
-        return set1.retainAll(set2);
     }
 
     public void printMap() {
@@ -41,7 +30,7 @@ public class Working {
             value = entry.getValue();
             key = entry.getKey();
             if(duplicatMap.containsKey(value) ) {
-                duplicatMap.put(value, key);// duplicatMap.get(value)+ ", " + key);
+                duplicatMap.put(value, key);
                 index++;
             } else {
                 duplicatMap.put(value, key);
@@ -49,21 +38,18 @@ public class Working {
         }
 
         if (index <= 1) {
-            System.out.println("There are at less two persons with the same firstName");
+            System.out.println("\nThere are at less two persons with the same firstName");
         } else {
-            System.out.println("There are at more two persons with the same firstName");
+            System.out.println("\nThere are at more two persons with the same firstName");
         }
     }
 
-    public void removeFirstName(String firstName) {
-//        for(Map.Entry<String, String> entry : person.entrySet()) {
-//            if (entry.getValue().equals(firstName)) {
-                person.remove(1);
-//            }
-//        }
-        System.out.println(person);
+    public void removeByFirstName(String value) {
+        Iterator<Map.Entry<String, String>> iterator = person.entrySet().iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().getValue().equals(value))
+                iterator.remove();
+        }
     }
-
-
 
 }

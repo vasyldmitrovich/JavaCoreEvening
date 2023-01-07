@@ -1,5 +1,6 @@
 package com.softserve.edu10.MyProjects.Homework1;
-
+/*Roman Sitko Lesson 10, Homework1
+* */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,7 +11,7 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        //toDoSet();
+        toDoSet();
         toDoMap();
 
 
@@ -18,14 +19,14 @@ public class Main {
 
     public static void toDoSet() throws IOException {
 
-        Working workingSet = new Working();
-
+        ClassSet workingSet = new ClassSet();
         Set<Integer> set1 = new HashSet<>();
-        Set<Integer> set2 = new HashSet<>();
         set1.add(1);
         set1.add(2);
         set1.add(3);
         set1.add(4);
+
+        Set<Integer> set2 = new HashSet<>();
         set2.add(2);
         set2.add(3);
         set2.add(4);
@@ -69,10 +70,14 @@ public class Main {
         personalMap.put("Tytuf", "Oleg");
 
 
-        Working workingMap = new Working(personalMap);
-        workingMap.printMap();
-        //workingMap.findDuplicateFirstName();
-        workingMap.removeFirstName("Ira");
+        ClassMap classMap = new ClassMap(personalMap);
+        classMap.printMap();
+
+        classMap.findDuplicateFirstName();
+        classMap.removeByFirstName("Ira");
+
+        System.out.println();
+        classMap.printMap();
 
 
     }
