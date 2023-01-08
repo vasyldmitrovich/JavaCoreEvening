@@ -1,7 +1,8 @@
 package com.softserve.edu06.PracticalTask_2;
 
 public class Point {
-    private int x, y;
+    private final int x;
+    private final int y;
 
     public Point(int x, int y) {
         this.x = x;
