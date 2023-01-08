@@ -1,9 +1,9 @@
 package com.softserve.edu06.Homework_2;
 
 public class Employee {
-    private String name;
-    private int age;
-    private double salary;
+    private final String name;
+    private final int age;
+    private final double salary;
 
     public Employee(String name, int age, double salary) {
         this.name = name;
