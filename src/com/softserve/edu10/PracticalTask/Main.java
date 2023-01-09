@@ -3,6 +3,7 @@ package com.softserve.edu10.PracticalTask;
 import com.softserve.service.MyScanner;
 
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.Map;
 
 public class Main {
@@ -39,11 +40,17 @@ public class Main {
     }
 
     public static void findNameByID(HashMap<Integer, String> employeeMap){
-        int id = MyScanner.writeInputInt("Enter ID");
-        if (employeeMap.containsKey(id)){
-            System.out.println("Name: "+employeeMap.get(id));
-        }else {
-            System.out.println("ID "+id+" didn't find.");
+        try {
+            int id = MyScanner.writeInputInt("Enter ID");
+
+            if (employeeMap.containsKey(id)){
+                System.out.println("Name: "+employeeMap.get(id));
+            }else {
+                System.out.println("ID "+id+" didn't find.");
+            }
+        }
+        catch (NumberFormatException exception){
+          System.out.println("Invalid ID");
         }
     }
 
