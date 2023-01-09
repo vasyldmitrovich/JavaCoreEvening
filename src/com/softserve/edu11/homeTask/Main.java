@@ -7,15 +7,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
+
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
         runFirst();
         runSecond();
         runThird();
+
     }
 
     static void runFirst() {
+
         int max = Integer.MIN_VALUE;
         char[] arrChar = new char[0];
         String sentence = scan.nextLine();
