@@ -1,13 +1,12 @@
 package com.softserve.edu12.homeTask;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-//        div();
+        div();
         System.out.println(readNumber(1, 10));
     }
 
@@ -20,15 +19,13 @@ public class Main {
     }
 
     static int readNumber(int start, int end) {
-        try{
+        try {
             int num = scanner.nextInt();
-            if (num>end || num<start) throw new Exception("Mismatched range");
+            if (num > end || num < start) throw new Exception("Mismatched range");
             return num;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
 
 
     }
