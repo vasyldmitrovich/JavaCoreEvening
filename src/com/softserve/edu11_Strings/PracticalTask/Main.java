@@ -35,25 +35,33 @@ public class Main {
         String personalData = MyScanner.writeInputString("Enter surname, name and patronymic");
 
         String[] arrayData = personalData.split(" ");
-        String surname = arrayData[0];
-        String name = arrayData[1];
-        String patronymic = arrayData[2];
+        try {
+            String surname = arrayData[0];
+            String name = arrayData[1];
+            String patronymic = arrayData[2];
 
-        System.out.println("Surname and initials: "+getSurnameAndInitials(surname, name,patronymic));
-        System.out.println("Name: "+name);
-        System.out.println("Name, middle name and last name:"+getNamePatronymicSurname(surname, name,patronymic));
+            System.out.println("Surname and initials: "+getSurnameAndInitials(surname, name,patronymic));
+            System.out.println("Name: "+name);
+            System.out.println("Name, middle name and last name:"+getNamePatronymicSurname(surname, name,patronymic));
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Sentence must have surname, name and patronymic with one space between them");
+        }
     }
 
-    public static String getSurnameAndInitials(String surname, String name,String patronymic){
-        StringBuffer res = new StringBuffer();
-        res.append(surname);
-        res.append(" ");
-        res.append(name.toUpperCase().charAt(0));
-        res.append(". ");
-        res.append(patronymic.toUpperCase().charAt(0));
-        res.append(".");
+    public static String getSurnameAndInitials(String surname, String name,String patronymic) throws ArrayIndexOutOfBoundsException{
+        if (surname.length()>0 & name.length()>0 & patronymic.length()>0) {
+            StringBuffer res = new StringBuffer();
+            res.append(surname);
+            res.append(" ");
+            res.append(name.toUpperCase().charAt(0));
+            res.append(". ");
+            res.append(patronymic.toUpperCase().charAt(0));
+            res.append(".");
 
-        return res.toString();
+            return res.toString();
+        }
+        else {throw new ArrayIndexOutOfBoundsException();}
     }
 
     public static String getNamePatronymicSurname(String surname, String name,String patronymic){
