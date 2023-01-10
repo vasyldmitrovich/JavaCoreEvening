@@ -9,7 +9,7 @@ public class UserEnter {
     public static float numFloat;
     public static String UserEnter(String quest){
         Scanner inp = new Scanner(System.in);
-        System.out.println(quest);
+        System.out.print(quest);
         inform = inp.nextLine();
         return inform;
     }
