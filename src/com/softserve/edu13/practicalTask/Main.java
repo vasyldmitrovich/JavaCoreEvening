@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -15,7 +14,7 @@ public class Main {
         dayOfWeek();
         firstMonday();
         sortedList(arrInitialize());
-        System.out.println(count(arrInitializeInteger(), n->n%2==0));
+        System.out.println(count(arrInitializeInteger(), n -> n % 2 == 0));
 
     }
 
@@ -31,7 +30,7 @@ public class Main {
     }
 
     static void sortedList(List<String> list) {
-        Collections.sort(list, Main::StringCompare);
+        list.sort(Main::StringCompare);
         System.out.println(list);
     }
 
