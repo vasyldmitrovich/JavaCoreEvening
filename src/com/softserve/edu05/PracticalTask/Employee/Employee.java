@@ -31,11 +31,11 @@ public class Employee {
     }
 
     /*Naming method is not correct, use Camel Case style*/
-    public int getDepartment_number() {
+    public int getDepartmentNumber() {
         return department_number;
     }
 
-    public void setDepartment_number(int department_number) {
+    public void setDepartmentNumber(int department_number) {
         this.department_number = department_number;
     }
 

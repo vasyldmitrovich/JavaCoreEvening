@@ -32,8 +32,8 @@ public class MainCar {
         }
         System.out.println("\nCars were sorted by the field year: ");
         Arrays.sort(cars, Comparator.comparing(Car::getYearProd));
-        /*Instead nex two line use System.out.println(Arrays.toString(cars));*/
-        String elements = Arrays.toString(cars);
-        System.out.println(elements);
+        /*Instead nex two line use System.out.println(Arrays.toString(cars));  DONE*/
+
+        System.out.println(Arrays.toString(cars));
     }
 }

@@ -32,7 +32,7 @@ public class MainEmployee {
         }
         Employee search = null;
         for (Employee empl : employees) {
-            if (empl.getDepartment_number() == number) {
+            if (empl.getDepartmentNumber() == number) {
                 search = empl;
             } else continue;
             System.out.println("The workers of the department: " + search);
@@ -40,7 +40,6 @@ public class MainEmployee {
 
         System.out.println("\nEmployees were sorted by salary: ");
         Arrays.sort(employees, Comparator.comparing(Employee::getSalary));
-        String elements = Arrays.toString(employees);
-        System.out.println(elements);
+        System.out.println(Arrays.toString(employees));
     }
 }
