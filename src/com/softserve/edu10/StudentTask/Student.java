@@ -72,18 +72,4 @@ public class Student {
                 '}';
     }
 
-    /*@Override
-    public int compareTo(Student o) {
-        return 0;
-    }
-
-    @Override
-    public int compare(Student o1, Student o2) {
-        int res;
-        res = o1.getName().compareTo(o2.getName());
-        if (res==0){
-            res = o1.getCourse()-o2.getCourse();
-        }
-        return res;
-    }   */
 }

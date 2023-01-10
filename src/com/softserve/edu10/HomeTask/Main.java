@@ -1,7 +1,5 @@
 package com.softserve.edu10.HomeTask;
 
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -11,7 +9,7 @@ public class Main {
     }
 
     public static void go(){
-        //useSetApp();
+        useSetApp();
 
         useMapApp();
     }
