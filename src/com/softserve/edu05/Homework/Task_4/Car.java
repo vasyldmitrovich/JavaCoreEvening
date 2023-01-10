@@ -53,13 +53,13 @@ public class Car {
         return cars1;
     }
     public Car[] sortByYear(Car[] cars) {
-        int tmp;
+        Car tmp;
         for (int i = 0; i < cars.length - 1; i++) {
             for (int j = i + 1; j < cars.length; j++) {
                 if (cars[i].yearOfProduction > cars[j].yearOfProduction) {
-                    tmp = cars[i].yearOfProduction;
-                    cars[i].yearOfProduction = cars[j].yearOfProduction;
-                    cars[j].yearOfProduction = tmp;
+                    tmp = cars[i];
+                    cars[i] = cars[j];
+                    cars[j] = tmp;
                 }
             }
         }
