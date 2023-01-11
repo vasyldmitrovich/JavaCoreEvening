@@ -7,37 +7,38 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        Text.check();
+//        Text.printCheckText();
+//        Text.printName();
 
 
 
-/*
-        //String text = "";
-        //
-        String pattern = "Now is the time";
-//      String pattern ="[bt]{2}";
+		//String text = "";
+		//
+		String pattern ="[A-Za-z]+";
 //		String pattern ="(ab)+";
 //		String pattern ="(\\w)\\1"; // Java String: \\ -> \
 //		String pattern = "\\b\\w*([\\w])\\1\\w*\\b";
-        String text = "Now is the timе";
-        //
+		String text = "Sitko Roman Igorovych";
+		//
 
-        Pattern p = Pattern.compile(pattern);
-        Matcher m = p.matcher(text);
+		Pattern p = Pattern.compile(pattern);
+		Matcher m = p.matcher(text);
 
-        // 1. Is correspond
-        if (m.matches()) {
-            System.out.println("m.matches() OK");
-        } else {
-            System.out.println("m.matches() FALSE");
-        }
-        // 2. Get all parts
-        m.reset(); // Reset Iterator
+		// 1. Is correspond
+		if (m.matches()) {
+			System.out.println("m.matches() OK");
+		} else {
+			System.out.println("m.matches() FALSE");
+		}
+		// 2. Get all parts
+		m.reset(); // Reset Iterator
 
-        while (m.find()) {
-            System.out.print(" *" + text.substring(m.start(), m.end()) + "* ");
-        }
-*/
+        String s1, s2, s3;
+		while (m.find()) {
+		    s1 = text.substring(m.start(), m.end());
+//			System.out.print(" *" + text.substring(m.start(), m.end()) + "* ");
+		}
+
 
 
     }
