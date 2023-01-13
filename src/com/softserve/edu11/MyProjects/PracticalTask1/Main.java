@@ -1,45 +1,26 @@
 package com.softserve.edu11.MyProjects.PracticalTask1;
 
 import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
+/*Roman Sitko
+* Lesson11, practical Tasks*/
 public class Main {
     public static void main(String[] args) throws IOException {
+/*
+        // Practical Task 1
+        Text.printCheckText();
+*/
 
-//        Text.printCheckText();
-//        Text.printName();
+/*
+        // Practical Task 2
+        Text.printName(); // Different string variable
+        Text.printName1(); // one string variable
+*/
 
-
-
-		//String text = "";
-		//
-		String pattern ="[A-Za-z]+";
-//		String pattern ="(ab)+";
-//		String pattern ="(\\w)\\1"; // Java String: \\ -> \
-//		String pattern = "\\b\\w*([\\w])\\1\\w*\\b";
-		String text = "Sitko Roman Igorovych";
-		//
-
-		Pattern p = Pattern.compile(pattern);
-		Matcher m = p.matcher(text);
-
-		// 1. Is correspond
-		if (m.matches()) {
-			System.out.println("m.matches() OK");
-		} else {
-			System.out.println("m.matches() FALSE");
-		}
-		// 2. Get all parts
-		m.reset(); // Reset Iterator
-
-        String s1, s2, s3;
-		while (m.find()) {
-		    s1 = text.substring(m.start(), m.end());
-//			System.out.print(" *" + text.substring(m.start(), m.end()) + "* ");
-		}
-
-
-
+        // Practical Task 3
+        System.out.println("Petrenko Petro Petrovych : " + Text.checkWithRegExp("Petrenko Petro Petrovych"));
+        System.out.println("Petrenko Petro : " + Text.checkWithRegExp("Petrenko Petro"));
+        System.out.println("Petrenko Petro. : " + Text.checkWithRegExp("Petrenko Petro."));
+        System.out.println("Petrenko Pe! : " + Text.checkWithRegExp("Petrenko Pe!"));
+        System.out.println("Petrenko 4423_ : " + Text.checkWithRegExp("Petrenko 4423_"));
     }
 }
