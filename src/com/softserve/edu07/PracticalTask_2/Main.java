@@ -8,7 +8,7 @@ public class Main {
                 new Teacher("Ivan", 1234),
                 new Cleaner("Dima", 1234),
                 new Cleaner("Sasha", 1234),
-                new Student("Olia"),
+                new Student("Olya"),
                 new Student("Inna")
         };
         for (Person person : people) {

@@ -13,22 +13,23 @@ public class DaysInAMonth {
     }
 
     public int whichMonth(int a) {
-        int[] whichMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31 ,30 , 31};
+        int[] whichMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         if (a < 0 | a > 12) {
-            return  -1;
+            return -1;
         } else {
-            return  whichMonth[a - 1];
+            return whichMonth[a - 1];
         }
     }
 
-    public String daysInAMonth(){
+    public String daysInAMonth() {
         int a = whichMonth(inPut());
         if (a != -1) {
             return "Selected month contains " + a + " days.";
-        }else {
+        } else {
             return "Incorrect month number.";
         }
     }
+
     public static void main(String[] args) {
         DaysInAMonth daysInAMonth = new DaysInAMonth();
         System.out.println(daysInAMonth.daysInAMonth());
