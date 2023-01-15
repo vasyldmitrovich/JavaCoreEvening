@@ -15,6 +15,11 @@ public class Person {
         this.birthYear = 0;
     }
 
+    public Person(String firstName, String lastname) {
+        this.firstName = firstName;
+        this.lastname = lastname;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -25,11 +30,6 @@ public class Person {
 
     public int getBirthYear() {
         return birthYear;
-    }
-
-    public Person(String firstName, String lastname) {
-        this.firstName = firstName;
-        this.lastname = lastname;
     }
 
     public void setBirthYear(int birthYear) {
