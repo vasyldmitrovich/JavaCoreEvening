@@ -23,6 +23,6 @@ public class FiveWords {
             map.put(text.substring(m.start(), m.end()).length(), text.substring(m.start(), m.end()));
         }
         int maxKey = Collections.max(map.keySet());
-        System.out.println(map.get(maxKey));
+        System.out.println(map.get(maxKey) + " - number of letters " + maxKey);
     }
 }
