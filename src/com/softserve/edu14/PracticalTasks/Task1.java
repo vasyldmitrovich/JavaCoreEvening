@@ -18,7 +18,7 @@ public class Task1 {
 
         List <String> notEmptyStrings = list.stream()
                 .filter(string -> !string.isEmpty())
-                .toList();
+                .collect(Collectors.toList());
         System.out.println("Print how many not empty strings are in this list: " + notEmptyStrings);
 
         String stringsToUppercase  = list.stream()
