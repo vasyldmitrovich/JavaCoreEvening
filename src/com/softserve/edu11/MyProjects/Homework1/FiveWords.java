@@ -12,25 +12,31 @@ public class FiveWords {
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(text);
 
-        // 2. Get all parts
         m.reset(); // Reset Iterator
 
-//        Map<Integer, String> map = new HashMap<>();
+//       Map<Integer, String> map = new HashMap<>();
         List<String> list = new ArrayList<>();
         List<Integer> list1 = new ArrayList<>();
 
         while (m.find()) {
-//            System.out.println(" *" + text.substring(m.start(), m.end()).length() + "* ");
-//            map.put(text.substring(m.start(), m.end()).length(), text.substring(m.start(), m.end()));
             list.add(text.substring(m.start(), m.end()));
             list1.add(text.substring(m.start(), m.end()).length());
 
         }
-        int maxKey = 0; // Collections.max(map.keySet());
-//        System.out.println(map.get(maxKey) + " - number of letters " + maxKey);
+        int maxKey = 0;
 
+        //bring the second word in reverse order
+        char[] arrayOfSecondWord = list.get(1).toCharArray();
+        StringBuilder secondWord = new StringBuilder();
+        for (int i = arrayOfSecondWord.length - 1; i >= 0; i--) {
+            secondWord.append(arrayOfSecondWord[i]);
+        }
+
+        //display the longest word in the sentence
+        //determine the number of its letters
         maxKey = list1.indexOf(Collections.max(list1));
-        System.out.println(list.get(maxKey) + " - number of letters " + Collections.max(list1));
+        System.out.println(text + "\n" + list.get(maxKey) + ": number of letters " +
+                Collections.max(list1) + ". Reverse second word: " + secondWord + "\n");
 
     }
 }
