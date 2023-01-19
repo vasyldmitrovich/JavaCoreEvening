@@ -58,7 +58,11 @@ public class Employee {
     int bonuses() {
         return salary() / 10;
     }
-
+    void changeRate(int newRate){
+        totalSum -= salary() + bonuses();
+        setRate(newRate);
+        totalSum += salary() + bonuses();
+    }
 
 
     @Override
@@ -67,7 +71,4 @@ public class Employee {
         return info;
     }
 
-    public static void main(String[] args) {
-
-    }
 }

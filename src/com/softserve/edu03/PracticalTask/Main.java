@@ -9,10 +9,14 @@ public class Main {public static void main(String[] args) {
     Employee e2 = new Employee("Alek", 12, 120);
     Employee e3 = new Employee("Andrew", 23, 130);
 
-    System.out.println(e1.toString());
-    System.out.println(e2.toString());
-    System.out.println(e3.toString());
-    System.out.println("\nTotal Salary: " + Employee.totalSum);
+    System.out.println(e1);
+    System.out.println("Salary :"+ e1.getHours()*e1.getRate());
+    System.out.println(e2);
+    System.out.println("Salary :"+ e2.getHours()*e2.getRate());
+    System.out.println(e3);
+    System.out.println("Salary :"+ e3.getHours()*e3.getRate());
+    System.out.println("\nTotal Salary with bonuses: " + Employee.totalSum);
+
 
 
 }
