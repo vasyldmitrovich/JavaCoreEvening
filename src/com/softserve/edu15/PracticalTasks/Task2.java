@@ -13,8 +13,6 @@ public class Task2 {
         t2.start();
         t1.join();
         t2.join();
-
-
     }
 
     public static class MyThread1 extends Thread{
