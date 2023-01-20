@@ -16,12 +16,11 @@ public class Methods {
 
         if (longestWord == null) {
             System.out.println("You have to enter five words. Try again");
-            new Methods().longestWord(check(inPut()));
+            homework();
         } else {
             System.out.println("The longest word in the sentence: " + "[ " + longestWord + " ]"
                     + ", and it contains " + amountOfLettersInAWord + " ] letters."
                     + "Second word in reverse order: [ " + reverseSecondWord + " ].");
-
         }
     }
 
@@ -33,7 +32,7 @@ public class Methods {
     public String check(String string) {
         Pattern p = Pattern.compile("[A-Za-z ]+");
         Matcher m = p.matcher(string);
-        if (m.matches()) {
+        if (m.matches() && string.split(" ").length == 5) {
             return string;
         } else {
             return null;
