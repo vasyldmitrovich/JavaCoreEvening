@@ -10,10 +10,10 @@ public class Methods {
     public void homework() throws IOException {
         System.out.println("Enter sentence of five words.");
         String inPut = inPut();
-        String check = check(inPut);
-        String longestWord = longestWord(check);
+        String conditionCheck = conditionCheck(inPut);
+        String longestWord = longestWord(conditionCheck);
         int amountOfLettersInAWord = amountOfLettersInAWord(longestWord);
-        String reverseSecondWord = reverseSecondWord(check);
+        String reverseSecondWord = reverseSecondWord(conditionCheck);
 
         if (longestWord == null) {
             System.out.println("You have to enter five words. Try again");
@@ -31,7 +31,17 @@ public class Methods {
         return scanner.nextLine();
     }
 
-    public String check(String string) {
+    public String checkIfIsAString(String string) {
+        Pattern p = Pattern.compile("[A-Za-z]+");
+        Matcher m = p.matcher(string);
+        if (m.matches()) {
+            return string;
+        } else {
+            return null;
+        }
+    }
+
+    public String conditionCheck(String string) {
         Pattern p = Pattern.compile("[A-Za-z ]+");
         Matcher m = p.matcher(string);
         if (m.matches() && string.split(" ").length == 5) {
@@ -39,10 +49,11 @@ public class Methods {
         } else {
             return null;
         }
+
     }
 
     public String longestWord(String string) {
-        if (string != null) {
+        if (string != null && checkIfIsAString(string) != null) {
             String longestWord = "";
             for (String s : string.split(" ")) {
                 if (s.length() > longestWord.length()) {
@@ -56,7 +67,7 @@ public class Methods {
     }
 
     public int amountOfLettersInAWord(String string) {
-        if (string == null || string.split(" ").length > 1) {
+        if (string == null || string.split(" ").length > 1 || checkIfIsAString(string) == null) {
             return 0;
         } else {
             return string.length();
