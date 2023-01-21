@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         List<Plant> list = new ArrayList<>();
         try {
-            list.add(new Plant(10, "BLue", "Herbs"));
+            list.add(new Plant(10, "BLuE", "Herbs"));
             list.add(new Plant(11, "red", "CLIMBERS"));
             list.add(new Plant(20, "white", "herbs"));
             list.add(new Plant(0, "red", "ClimbeRS"));
