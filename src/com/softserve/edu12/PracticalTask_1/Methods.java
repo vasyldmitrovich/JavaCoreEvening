@@ -35,11 +35,11 @@ public class Methods {
             checkIfIsLessThenZero(a);
             checkIfIsLessThenZero(b);
         } catch (MyException myException) {
-            System.out.println("Caught the exception\nException: " + myException.getMessage() + ", error code: " + myException.getErrorCode());
+            System.err.println("Caught the exception\nException: " + myException.getMessage() + ", error code: " + myException.getErrorCode());
         } finally {
             double r = squareRectangle(a, b);
             if (a < 0 | b < 0) {
-                System.out.println("Bad result: " + r);
+                System.err.println("Bad result: " + r);
             } else {
                 System.out.println("Good result: " + r);
             }

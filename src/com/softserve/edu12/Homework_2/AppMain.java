@@ -28,7 +28,7 @@ public class AppMain {
                 int integer = new Methods().readNumber(start, end);
                 list.add(integer);
             } catch (MyException myException) {
-                System.out.println("Exception: [ " + myException.getMessage()
+                System.err.println("Exception: [ " + myException.getMessage()
                         + " ] , exception code: [ " + myException.getErrorCode() + " ]");
                 list.add(null);
             }
