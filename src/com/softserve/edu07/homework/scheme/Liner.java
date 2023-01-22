@@ -3,7 +3,7 @@ package com.softserve.edu07.homework.scheme;
 public class Liner extends WaterVehicle {
     int floors;
 
-    public Liner(int passengers, int floors) {
+     public Liner(int passengers, int floors) {
         super(passengers);
         this.floors = floors;
     }
