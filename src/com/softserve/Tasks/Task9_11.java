@@ -13,9 +13,9 @@ public class Task9_11 {
 
         List<Integer> arrayList = new ArrayList<>();
 
-        Random random = new Random(1);
+        Random random = new Random();
         for (int i = 0; i < n; i++) {
-         arrayList.add(random.nextInt());
+         arrayList.add(random.nextInt(2));
         }
 
         System.out.println(arrayList);
@@ -25,6 +25,24 @@ public class Task9_11 {
                 .count();
 
         System.out.println("Number zero: "+numberZero);
+
+    }
+
+    public static void doTask10(){
+        System.out.println("Input natural number n>1");
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.next());
+
+        int step = 0;
+        while (n>1){
+            if (n%2 == 0){
+                n =n /2;
+            }else {
+             n = n*3+1;
+            }
+            step++;
+        }
+        System.out.println("Number of steps: "+step);
 
     }
 }
