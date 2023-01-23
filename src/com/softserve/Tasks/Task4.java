@@ -16,6 +16,7 @@ public class Task4 {
         while (m.find()) {
             loudCounter++;
         }
+
         System.out.println("Number of loud letters: " + loudCounter);
     }
 }
