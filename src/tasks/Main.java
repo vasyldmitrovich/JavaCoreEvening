@@ -13,10 +13,10 @@ public class Main {
                 Task1.main(args);
                 break;
             case 3:
-                Task3.getDollar(100.00, 1);
+                Task3.getDollar();
                 break;
             case 4:
-                Task4.countLetters("gsa");
+                Task4.countLetters();
                 break;
             case 5:
                 Task5.main(args);
