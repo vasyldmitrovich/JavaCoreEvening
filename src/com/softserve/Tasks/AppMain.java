@@ -1,5 +1,7 @@
 package com.softserve.Tasks;
 
+import com.softserve.Tasks.T12.NaturalNumbers;
+
 import java.util.Scanner;
 
 public class AppMain {
@@ -20,8 +22,13 @@ public class AppMain {
 
             switch (n){
                 case 0: run = false; break;
+                case 1: Task1.doTask1(); break;
+                case 3: Task3.doTask3(); break;
+                case 4: Task4.doTask4(); break;
                 case 9: Task9_11.doTask9(); break;
                 case 10: Task9_11.doTask10(); break;
+                case 12:
+                    NaturalNumbers.doTask12(); break;
             }
         }
     }
