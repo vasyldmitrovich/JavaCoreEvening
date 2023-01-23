@@ -1,0 +1,7 @@
+Hello world string
+My name is Vlad
+Apple is fruit
+Only vowel test
+Test txt file
+find var word in line
+test var string
