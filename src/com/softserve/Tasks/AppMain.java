@@ -25,6 +25,8 @@ public class AppMain {
                 case 1: Task1.doTask1(); break;
                 case 3: Task3.doTask3(); break;
                 case 4: Task4.doTask4(); break;
+                case 5: Task5.isPalindrome("abccba"); break;
+                case 6: Task6.wordsCalculator("I learn Java"); break;
                 case 9: Task9_11.doTask9(); break;
                 case 10: Task9_11.doTask10(); break;
                 case 12:
