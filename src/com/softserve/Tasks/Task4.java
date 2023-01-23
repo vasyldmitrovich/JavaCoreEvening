@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Task4 {
-    public static void main(String[] args) {
+    public static void doTask4() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input string");
         String s = sc.nextLine();

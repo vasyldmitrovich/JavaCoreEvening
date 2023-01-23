@@ -3,7 +3,7 @@ package com.softserve.Tasks;
 import java.util.Scanner;
 
 public class Task3 {
-    public static void main(String[] args) {
+    public static void doTask3() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input cost of dollar ");
         double costOfDollar = sc.nextDouble();
