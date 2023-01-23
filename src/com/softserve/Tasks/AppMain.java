@@ -21,6 +21,7 @@ public class AppMain {
             switch (n){
                 case 0: run = false; break;
                 case 9: Task9_11.doTask9(); break;
+                case 10: Task9_11.doTask10(); break;
             }
         }
     }

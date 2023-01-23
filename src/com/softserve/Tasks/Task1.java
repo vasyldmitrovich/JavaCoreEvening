@@ -3,7 +3,7 @@ package com.softserve.Tasks;
 import java.util.Scanner;
 
 public class Task1 {
-    public static void main(String[] args) {
+    public static void doTask1() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input number");
         int n = sc.nextInt();
