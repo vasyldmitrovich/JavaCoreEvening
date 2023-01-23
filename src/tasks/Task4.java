@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Task4 {
 
     public static void countLetters(){
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input some sentence: ");
         String str = scanner.next();

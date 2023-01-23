@@ -7,6 +7,7 @@ import java.util.Scanner;
 * */
 public class Task3 {
 
+
     public static void getDollar() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input cost One Dollar: ");
