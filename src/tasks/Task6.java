@@ -8,19 +8,25 @@ import java.util.regex.Pattern;
 
 public class Task6 {
 
-        private String sentence;
-        int i = 0;
-        public void createSentence() {
+        static int i = 0;
+        public static void createSentence() {
 
             BufferedReader inf  = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введіть речення: ");
+            String sentence;
             try {
                 sentence = inf.readLine();
+                findWord(sentence);
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
         }
-        public void findWord(){
+
+        public static void main(String[] args) {
+            createSentence();
+        }
+
+        public static void findWord(String sentence){
             int lengthWord = 0;
             String p = "[a-zA-Z\\`]+";
             Pattern pattern = Pattern.compile(p);
@@ -31,6 +37,8 @@ public class Task6 {
             }
             System.out.println("Кількість слів: " + i);
        }
+
+
 }
 
 
