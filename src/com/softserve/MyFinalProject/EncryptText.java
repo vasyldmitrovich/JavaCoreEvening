@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EncryptText {
+
     private static final String EN_LOWER_ALPHABET = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
     private static final String EN_UPPER_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private String inputStr;
@@ -23,7 +24,6 @@ public class EncryptText {
     }
 
     public void startProgram () {
-
         System.out.println("Start encrypt-decrypt program");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         byte tmpByte = 0;
