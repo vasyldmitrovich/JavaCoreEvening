@@ -24,6 +24,11 @@ public class MyScanner  {
         return myScanner.scan.nextLine();
     }
 
+    public static String writeInputStringInLine(String s)  {
+        System.out.print(s);
+        return myScanner.scan.nextLine();
+    }
+
     public static double writeInputDouble(String s) throws NumberFormatException{
         try {
             System.out.println(s);
