@@ -6,6 +6,8 @@ import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main implements AutoCloseable{
     public static void main(String[] args) {
@@ -46,6 +48,9 @@ public class Main implements AutoCloseable{
                 tempArrayOptions[i] = tempArrayOptions[i].replace(" ","");
                 if (mapOptions.containsKey(tempArrayOptions[i])){
                     arrayOptions.add(tempArrayOptions[i]);
+                }
+                else {
+                    System.out.println("Incorrect input - '"+tempArrayOptions[i]+"' remove\n");
                 }
             }
         }
@@ -117,6 +122,11 @@ public class Main implements AutoCloseable{
 
     public static void writeRating(HashMap<String, Integer> mapRating) {
         String fileName = "D:/Users/Лукьяненко/java/rating.txt";
+
+        mapRating = mapRating.entrySet().stream()
+                        .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                                (e1, e2) -> e1, LinkedHashMap::new));
 
         try (FileWriter fw = new FileWriter(fileName)){
 
