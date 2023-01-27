@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Main {
+public class Main implements AutoCloseable{
     public static void main(String[] args) {
         play();
     }
@@ -106,14 +106,11 @@ public class Main {
     public static void writeRating(HashMap<String, Integer> mapRating) {
         String fileName = "D:/Users/Лукьяненко/java/rating.txt";
 
-        try {
-            FileWriter fw = new FileWriter(fileName);
+        try (FileWriter fw = new FileWriter(fileName)){
 
             for (Map.Entry m : mapRating.entrySet()) {
                 fw.write(m.getKey() + " " + m.getValue() + "\n");
             }
-
-            fw.close();
         } catch (IOException exception) {
             System.out.println(exception.getMessage());
         }
@@ -157,5 +154,10 @@ public class Main {
         }
 
         return rating;
+    }
+
+    @Override
+    public void close() throws Exception {
+
     }
 }
