@@ -3,9 +3,7 @@ package com.softserve.graduation;
 import com.softserve.service.MyScanner;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,7 +13,6 @@ public class Main {
     }
 
     public static void play() {
-        System.out.println("Let's play Rock-paper-scissors");
 
         String name = MyScanner.writeInputStringInLine("Enter your name: ");
         System.out.println("Hello, " + name);
@@ -27,7 +24,18 @@ public class Main {
             rating = mapRating.get(name);
         }
 
-        rating = playing(rating);
+        String optionsGame = MyScanner.writeInputString("Choose any options " +
+                "(rock,gun,lightning,devil,dragon,water,air,paper,sponge,wolf,tree,human,snake,scissors,fire)");
+
+        String[] arrayOptions = {"rock", "paper", "scissors"};
+        if (!optionsGame.isEmpty()) {
+            for (int i = 0; i < arrayOptions.length; i++) {
+                arrayOptions[i] = arrayOptions[i].replace(" ","");
+            }
+            arrayOptions = optionsGame.split(",");
+        }
+
+        rating = playing(rating, arrayOptions);
 
         mapRating.put(name, rating);
 
@@ -42,46 +50,36 @@ public class Main {
         }
     }
 
-    public static int playing(int rating) {
+    public static int playing(int rating, String[] arrayOptions) {
         boolean run = true;
 
+        int bound = arrayOptions.length;
+
+        HashMap<String, List<String>> mapOptions = createMapOptions();
+
+        System.out.println("Okay, let's start. For exit input '!exit'. Print score input '!rating'.");
+
         while (run) {
-            int choice = inputChoice();
+            String choice = MyScanner.writeInputString("Input your choice").toLowerCase();
 
             Random random = new Random();
-            int choiceComputer = random.nextInt(3) + 1;
+            int choiceComputer = random.nextInt(bound);
 
-            String option = "";
-            switch (choiceComputer) {
-                case 1:
-                    option = "rock";
-                    break;
-                case 2:
-                    option = "paper";
-                    break;
-                case 3:
-                    option = "scissors";
-                    break;
-            }
+            String option = arrayOptions[choiceComputer];
 
-            if (choice < 1 | choice > 5) {
-                System.out.println("Incorrect value\n");
-            } else if (choice == 5) {
+            if (choice.equals("!exit")) {
                 run = false;
 
                 System.out.println("Bye!");
-            } else if (choice == 4) {
+            } else if (choice.equals("!rating")) {
                 System.out.println("Your rating: " + rating);
-            } else if (choice == choiceComputer) {
-                rating = rating + 50;
-                System.out.printf("There is a draw (%s)\n", option);
-            } else if ((choice == 1 & choiceComputer == 2)
-                    | (choice == 2 & choiceComputer == 3)
-                    | (choice == 3 & choiceComputer == 1)) {
-                System.out.printf("Sorry, but the computer chose %s\n", option);
-            } else {
-                rating = rating + 100;
-                System.out.printf("Well done. The computer chose %s and failed\n", option);
+            } else if (!Arrays.stream(arrayOptions).anyMatch(s->s.equals(choice))) {
+                System.out.println("Incorrect value\n");
+            } else if (mapOptions.containsKey(choice)) {
+                rating = rating + getResult(mapOptions, choice, option);
+            }
+            else {
+                System.out.println("Incorrect value\n");   
             }
         }
 
@@ -121,12 +119,52 @@ public class Main {
             FileWriter fw = new FileWriter(fileName);
 
             for (Map.Entry m : mapRating.entrySet()) {
-                fw.write(m.getKey() + " " + m.getValue()+"\n");
+                fw.write(m.getKey() + " " + m.getValue() + "\n");
             }
 
             fw.close();
         } catch (IOException exception) {
             System.out.println(exception.getMessage());
         }
+    }
+
+    public static HashMap<String, List<String>> createMapOptions() {
+        HashMap<String, List<String>> mapOptions = new HashMap<>();
+
+        mapOptions.put("rock", Arrays.asList("fire", "scissors", "snake", "human", "tree", "wolf", "sponge"));
+        mapOptions.put("fire", Arrays.asList("scissors", "snake", "human", "tree", "wolf", "sponge", "paper"));
+        mapOptions.put("scissors", Arrays.asList("snake", "human", "tree", "wolf", "sponge", "paper", "air"));
+        mapOptions.put("snake", Arrays.asList("human", "tree", "wolf", "sponge", "paper", "air", "water"));
+        mapOptions.put("human", Arrays.asList("tree", "wolf", "sponge", "paper", "air", "water", "dragon"));
+        mapOptions.put("tree", Arrays.asList("wolf", "sponge", "paper", "air", "water", "dragon", "devil"));
+        mapOptions.put("wolf", Arrays.asList("sponge", "paper", "air", "water", "dragon", "devil", "lightning"));
+        mapOptions.put("sponge", Arrays.asList("paper", "air", "water", "dragon", "devil", "lightning", "gun"));
+        mapOptions.put("paper", Arrays.asList("air", "water", "dragon", "devil", "lightning", "gun", "rock"));
+        mapOptions.put("air", Arrays.asList("water", "dragon", "devil", "lightning", "gun", "rock", "fire"));
+        mapOptions.put("water", Arrays.asList("dragon", "devil", "lightning", "gun", "rock", "fire", "scissors"));
+        mapOptions.put("dragon", Arrays.asList("devil", "lightning", "gun", "rock", "fire", "scissors", "snake"));
+        mapOptions.put("devil", Arrays.asList("lightning", "gun", "rock", "fire", "scissors", "snake", "human"));
+        mapOptions.put("lightning", Arrays.asList("gun", "rock", "fire", "scissors", "snake", "human", "tree"));
+        mapOptions.put("gun", Arrays.asList("rock", "fire", "scissors", "snake", "human", "tree", "wolf"));
+        
+        return mapOptions;
+    }
+    
+    public static int getResult(HashMap<String, List<String>> mapOptions, String choice, String choiceComputer){
+        List<String> array = mapOptions.get(choice);
+
+        int rating=0;
+        if (choice.equals(choiceComputer)){
+            rating = 50;
+            System.out.printf("There is a draw (%s)\n", choiceComputer);   
+        } else if (array.contains(choiceComputer)) {
+            rating = 100;
+            System.out.printf("Well done. The computer chose %s and failed\n", choiceComputer);
+        }
+        else {
+            System.out.printf("Sorry, but the computer chose %s\n", choiceComputer);
+        }
+
+        return rating;
     }
 }
