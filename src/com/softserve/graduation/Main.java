@@ -42,14 +42,6 @@ public class Main {
         writeRating(mapRating);
     }
 
-    public static int inputChoice() {
-        try {
-            return MyScanner.writeInputInt("\nInput your choice: 1-rock, 2-paper, 3-scissors, 4-rating, 5-exit");
-        } catch (NumberFormatException e) {
-            return 0;
-        }
-    }
-
     public static int playing(int rating, String[] arrayOptions) {
         boolean run = true;
 
@@ -69,11 +61,10 @@ public class Main {
 
             if (choice.equals("!exit")) {
                 run = false;
-
                 System.out.println("Bye!");
             } else if (choice.equals("!rating")) {
                 System.out.println("Your rating: " + rating);
-            } else if (!Arrays.stream(arrayOptions).anyMatch(s->s.equals(choice))) {
+            } else if (Arrays.stream(arrayOptions).noneMatch(s->s.equals(choice))) {
                 System.out.println("Incorrect value\n");
             } else if (mapOptions.containsKey(choice)) {
                 rating = rating + getResult(mapOptions, choice, option);
@@ -94,7 +85,7 @@ public class Main {
         Matcher m;
 
         try {
-            String s = null;
+            String s;
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             while ((s = br.readLine()) != null) {
                 m = pattern.matcher(s);
