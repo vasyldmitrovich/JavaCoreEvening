@@ -24,30 +24,42 @@ public class Main implements AutoCloseable{
             rating = mapRating.get(name);
         }
 
-        String optionsGame = MyScanner.writeInputString("Choose any options " +
-                "(rock,gun,lightning,devil,dragon,water,air,paper,sponge,wolf,tree,human,snake,scissors,fire)");
-
-        String[] arrayOptions = {"rock", "paper", "scissors"};
-        if (!optionsGame.isEmpty()) {
-            for (int i = 0; i < arrayOptions.length; i++) {
-                arrayOptions[i] = arrayOptions[i].replace(" ","");
-            }
-            arrayOptions = optionsGame.split(",");
-        }
-
-        rating = playing(rating, arrayOptions);
+        rating = playing(rating);
 
         mapRating.put(name, rating);
 
         writeRating(mapRating);
     }
 
-    public static int playing(int rating, String[] arrayOptions) {
+    public static List<String>  createArrayOptions(HashMap<String, List<String>> mapOptions){
+        String optionsGame = MyScanner.writeInputString("Choose any options " +
+                "(rock,gun,lightning,devil,dragon,water,air,paper,sponge,wolf,tree,human,snake,scissors,fire)");
+
+        List<String> arrayOptions = new ArrayList<>();
+
+        if (optionsGame.isEmpty()) {
+            arrayOptions = Arrays.asList("rock", "paper", "scissors");
+        }
+        else {
+            String[] tempArrayOptions = optionsGame.split(",");
+            for (int i = 0; i < tempArrayOptions.length; i++) {
+                tempArrayOptions[i] = tempArrayOptions[i].replace(" ","");
+                if (mapOptions.containsKey(tempArrayOptions[i])){
+                    arrayOptions.add(tempArrayOptions[i]);
+                }
+            }
+        }
+
+        return arrayOptions;
+    }
+
+    public static int playing(int rating) {
         boolean run = true;
 
-        int bound = arrayOptions.length;
-
         HashMap<String, List<String>> mapOptions = createMapOptions();
+
+        List<String> arrayOptions = createArrayOptions(mapOptions);
+        int bound = arrayOptions.size();
 
         System.out.println("Okay, let's start. For exit input '!exit'. Print score input '!rating'.");
 
@@ -57,14 +69,14 @@ public class Main implements AutoCloseable{
             Random random = new Random();
             int choiceComputer = random.nextInt(bound);
 
-            String option = arrayOptions[choiceComputer];
+            String option = arrayOptions.get(choiceComputer);
 
             if (choice.equals("!exit")) {
                 run = false;
                 System.out.println("Bye!");
             } else if (choice.equals("!rating")) {
                 System.out.println("Your rating: " + rating);
-            } else if (Arrays.stream(arrayOptions).noneMatch(s->s.equals(choice))) {
+            } else if (arrayOptions.stream().noneMatch(s->s.equals(choice))) {
                 System.out.println("Incorrect value\n");
             } else if (mapOptions.containsKey(choice)) {
                 rating = rating + getResult(mapOptions, choice, option);
