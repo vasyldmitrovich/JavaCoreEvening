@@ -8,8 +8,6 @@
 
 package com.softserve.Graduation;
 
-import com.sun.xml.internal.ws.addressing.WsaActionUtil;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -198,7 +196,7 @@ public class EncryptDecryptText {
 
         //Find letters(lower and upper case) and add new letters in accordance a key
         for(int i = 0; i < charsInputStr.length; i++) {
-            for(int j = charsOfLower_Alphabet.length - 1; j > 27; j--) {
+            for(int j = 51; j > 26; j--) {
                 if (charsInputStr[i] == charsOfLower_Alphabet[j]) {
                     listDecText.add(charsOfLower_Alphabet[j - key]);
                 }
@@ -207,6 +205,7 @@ public class EncryptDecryptText {
                 }
             }
         }
+
 //        System.out.println("listDecText - " + listDecText.size() + listDecText);
         //Find non letter element and his position. Add this element to list
         for (int i = 0; i < charsInputStr.length; i++) {
@@ -214,6 +213,7 @@ public class EncryptDecryptText {
                 listDecText.add(i, charsInputStr[i]);
             }
         }
+
 
         //Convert list to StrinfBuilder. For best view text.
         for(Character c : listDecText) {
