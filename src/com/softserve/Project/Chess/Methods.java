@@ -1,6 +1,10 @@
 package com.softserve.Project.Chess;
 
+import com.softserve.Project.Chess.Pieces.EmptySpace;
+
 import java.util.Scanner;
+
+import static com.softserve.Project.Chess.ChessBoard.outputBoard;
 
 public class Methods {
 
@@ -14,8 +18,10 @@ public class Methods {
     }
 
     public Piece[][] move(Piece[][] pieces, Position figureCoordinates, Position move) {
+
+
         pieces[move.x()][move.y()] = pieces[figureCoordinates.x()][figureCoordinates.y()];
-        pieces[figureCoordinates.x()][figureCoordinates.y()] = new Piece("-", figureCoordinates, "y");
+        pieces[figureCoordinates.x()][figureCoordinates.y()] = new EmptySpace("-", figureCoordinates, "y");
         return pieces;
     }
 }

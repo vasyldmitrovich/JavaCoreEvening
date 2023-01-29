@@ -1,6 +1,6 @@
 package com.softserve.Project.Chess;
 
-public class Piece {
+public abstract class Piece {
 
     private String figure;
 
@@ -21,6 +21,8 @@ public class Piece {
         this.position = position;
         this.color = color;
     }
+
+    public abstract boolean move(Position position1, Position position2);
 
     public String figure() {
         return figure;
