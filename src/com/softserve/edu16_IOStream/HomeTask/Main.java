@@ -11,6 +11,8 @@ public class Main implements AutoCloseable{
 
     public static void go(){
         doFirstTask();
+
+        doSecondTask();
     }
 
     public static void doFirstTask(){
@@ -85,5 +87,27 @@ public class Main implements AutoCloseable{
     @Override
     public void close() throws Exception {
 
+    }
+
+    public static void doSecondTask(){
+        String fileNameRead = "D:/Users/Лукьяненко/java/filePublic.txt";
+        String fileNameWrite = "D:/Users/Лукьяненко/java/filePrivate.txt";
+
+        try (FileWriter fw = new FileWriter(fileNameWrite)){
+            BufferedReader br = new BufferedReader(new FileReader(fileNameRead));
+            String s = null;
+            while ((s=br.readLine())!=null){
+                s = s.replaceAll("public","private");
+                fw.write(s+"\n");
+            }
+        }
+        catch (FileNotFoundException exception){
+            System.out.println(exception.getMessage());
+        }
+        catch (IOException exception){
+            System.out.println(exception.getMessage());
+        }
+
+        System.out.println("Task second done");
     }
 }
