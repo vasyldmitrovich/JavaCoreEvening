@@ -1,6 +1,8 @@
 package com.softserve.Project.Chess;
 
 
+import com.softserve.Project.Chess.Pieces.Bishop;
+
 import static com.softserve.Project.Chess.ChessBoard.outputBoard;
 
 public class ChessGame {

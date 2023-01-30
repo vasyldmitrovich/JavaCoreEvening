@@ -9,7 +9,7 @@ public class EmptySpace extends Piece {
     }
 
     @Override
-    public boolean move(Position position1, Position position2) {
+    public boolean canMove(Position position1, Position position2) {
         return true;
     }
 }
