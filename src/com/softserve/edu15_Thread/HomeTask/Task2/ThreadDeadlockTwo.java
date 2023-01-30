@@ -12,20 +12,17 @@ public class ThreadDeadlockTwo extends Thread{
     @Override
     public void run() {
         synchronized (y){
-            //for (int i = 0; i <5; i++) {
                 try {
                     Thread.sleep(10);
                     y.doSqrt();
-                }
-                catch (InterruptedException e){
+                } catch (InterruptedException e) {
                     System.out.println(e.fillInStackTrace());
                 }
-                synchronized (x){
+                synchronized (x) {
                     x.doSqrt();
                     System.out.println("Thread two");
-                    System.out.println("x="+x+"; y="+y);
+                    System.out.println("x=" + x + "; y=" + y);
                 }
-           // }
         }
     }
 }
