@@ -54,26 +54,28 @@ public class Main {
         t2.start();
 
         try {
+            //t1.start();
+           // t2.start();
             Thread.sleep(100);
-            System.out.println(t1.getState());
-            System.out.println(t2.getState());
-
-            if ((t1.getState() == Thread.State.BLOCKED) & (t2.getState() == Thread.State.BLOCKED)){
-                t1.interrupt();
-                System.out.println(t1.getState());
-                t2.interrupt();
-                System.out.println(t1.getState());
-            }
+//            System.out.println(t1.getState());
+//            System.out.println(t2.getState());
+//
+//            if ((t1.getState() == Thread.State.BLOCKED) & (t2.getState() == Thread.State.BLOCKED)){
+//                t1.interrupt();
+//                System.out.println(t1.getState());
+//                t2.interrupt();
+//                System.out.println(t1.getState());
+//            }
         }
         catch (InterruptedException e){
             System.out.println(e.getMessage());
         }
-        finally {
-            t1.interrupt();
-            System.out.println(t1.getState());
-            t2.interrupt();
-            System.out.println(t1.getState());
-        }
+//        finally {
+//            t1.interrupt();
+//            System.out.println(t1.getState());
+//            t2.interrupt();
+//            System.out.println(t1.getState());
+//        }
 
         System.out.println(t1.getState());
         System.out.println(t2.getState());

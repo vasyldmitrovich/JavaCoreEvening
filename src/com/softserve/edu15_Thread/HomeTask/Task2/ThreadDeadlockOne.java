@@ -12,7 +12,7 @@ public class ThreadDeadlockOne extends Thread{
     @Override
     public void run() {
         synchronized (x){
-            for (int i = 0; i <5; i++) {
+            //for (int i = 0; i <5; i++) {
                 try {
                     Thread.sleep(5);
                     x.doSqrt();
@@ -25,7 +25,7 @@ public class ThreadDeadlockOne extends Thread{
                     System.out.println("Thread one");
                     System.out.println("x="+x+"; y="+y);
                 }
-            }
+            //}
         }
     }
 }
