@@ -58,8 +58,8 @@ public class EncryptDecryptText {
                     throw new IOException();
                 }
 */
-                /*
-                * Switching beetween items menu*/
+
+                //Switching beetween items menu
                 switch (tmpMenu) {
                     case 1:
                         clearData();
@@ -128,7 +128,7 @@ public class EncryptDecryptText {
             if (tmp == 2) {
                 System.out.print("Input text for decrypt: ");
                 inputStr = br.readLine();
-                if (inputStr.length() > 100) {
+                if (inputStr.length() > 1000) {
                     throw new IllegalArgumentException();
                 }
                 System.out.print("Input key for decrypt (0-25): ");
