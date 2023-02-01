@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "app.auth.tokenExpirationMsec",
+      "type": "java.lang.Long",
+      "description": "Description for app.auth.tokenExpirationMsec."
+    },
+    {
+      "name": "app.auth.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Description for app.auth.jwtSecret."
+    },
+    {
+      "name": "spring.jpa.hibernate.naming-strategy",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.naming-strategy."
+    }
+  ] }

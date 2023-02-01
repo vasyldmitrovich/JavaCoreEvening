@@ -1,0 +1,47 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: username
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/prostopizza?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    #url: jdbc:mysql://localhost:3306/prostopi_prostopizza?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: Oleg
+    password: Oleg
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 585062223540-71c0p7qe2bpmfhokdes1npm8stmmfbc7.apps.googleusercontent.com
+            clientSecret: lJgMRU1ZEvGY0X-m6nBrXZyl
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+app:
+  auth:
+    tokenSecret: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImp0aSI6ImRiZmU4ZDM5LTFhMDgtNDM1ZC05NjA3LTRkYTY3YjkyYjQ2MyIsImlhdCI6MTU5MzU1MjEwMiwiZXhwIjoxNTkzNTU1NzUzfQ.uOIJ8Cc4wfdhEc5QpMt2ZDhVjg9p3FS1JX41LGlFTf4
+    tokenExpirationMsec: 864000000
+  oauth2:
+    authorizedRedirectUris:
+      - http://localhost:4200/oauth2/redirect
+      - myandroidapp://oauth2/redirect
+      - myiosapp://oauth2/redirect
