@@ -1,12 +1,14 @@
 package com.softserve.edu12.practical_tasks.task2;
 
-public class ColorException extends Exception {
-    public static void possibleColor(Color color) throws ColorException {
+import java.io.IOException;
 
-        if (color != Color.GREEN | color != Color.BLUE) {
-            throw new ColorException();
+public class ColorException {
+    public static Color possibleColor(Color color) throws IOException {
+
+        if (color != Color.GREEN & color != Color.BLUE & color != Color.YELLOW & color != Color.PINK) {
+            throw new IOException("Forbidden color!");
         }
-
+        return color;
 
     }
 
